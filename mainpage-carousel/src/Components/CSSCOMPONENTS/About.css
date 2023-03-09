@@ -1,0 +1,58 @@
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    height: 100%;
+  }
+  
+  .picture-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .picture-container img {
+    /* width: 100%; */
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .text-container {
+    background-color:#FFA500;
+    padding: 20px;
+    height: 100%;
+  }
+  
+  .text-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .text-container p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .button-container {
+    margin-top: flex;
+    justify-content: center;
+  }
+  .button-container button {
+   margin-top: 20px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .picture-container {
+      order: 2; /* Move the image container below the text container */
+    }
+  }
+  
