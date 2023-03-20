@@ -38,7 +38,7 @@ const NavigationBar = () => {
 						<div className="logo">
 							{" "}
 							{/* logo class to style in css */}
-							<span className="cofo">COFO</span>{" "}
+							<span className="cofo">CoFo</span>{" "}
 							{/* cofo class to style in css */}
 							<span className="concept">CONCEPT</span>{" "}
 							{/* concept class to style in css */}
@@ -70,7 +70,6 @@ const NavigationBar = () => {
 									Separated link {/*COME BACK AND SOMETHING */}
 								</NavDropdown.Item>
 							</NavDropdown>
-							<Nav.Link href="#About">About</Nav.Link>
 							<Nav.Link href="#Contact">Contact</Nav.Link>
 						</Nav>
 						<Nav>
