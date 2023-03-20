@@ -75,13 +75,13 @@ const NavigationBar = () => {
 						</Nav>
 						<Nav>
 							<Nav.Link href="#Cart">
-								<FontAwesomeIcon icon={faShoppingCart} />{" "}
+								<FontAwesomeIcon icon={faShoppingCart} />{" Cart"}
 								{/* FontAwesomeIcon component for icons(Cart icon) */}
 							</Nav.Link>
 							<Nav.Link eventKey={2} href="#login">
 								{" "}
 								{/* eventKey is used to identify the component */}
-								<FontAwesomeIcon icon={faUser} />{" "}
+								<FontAwesomeIcon icon={faUser} />{" Login"}
 								{/* FontAwesomeIcon component for icons(User icon) */}
 							</Nav.Link>
 							<Nav.Link
