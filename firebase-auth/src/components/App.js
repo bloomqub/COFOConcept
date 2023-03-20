@@ -14,7 +14,7 @@ function App() {
       </div>
       </Container>
     </AuthProvider>
-  )
+  ) 
 }
 
 export default App;
