@@ -30,8 +30,4 @@ export default class About extends Component {
 	}
 }
 
-// Notes
-// -------
-// * Make the contact me button centered
-// * Make the picture smaller
-// * add href to the button
+

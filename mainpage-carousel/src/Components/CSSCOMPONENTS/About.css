@@ -37,11 +37,14 @@
   }
   
   .button-container {
-    margin-top: flex;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center; /* Allows for the contact button to be centered */
   }
+  
   .button-container button {
-   margin-top: 20px;
+    margin-top: 20px;
   }
   
   @media screen and (max-width: 768px) {
