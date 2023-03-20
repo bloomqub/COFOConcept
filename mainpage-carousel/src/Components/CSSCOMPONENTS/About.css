@@ -24,14 +24,14 @@
   }
   
   .text-container h1 {
-    font-size: 36px;
+    font-size: 48px;
     margin-bottom: 20px;
     text-align: center;
   }
   
   .text-container p {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 24px;
+    line-height: 2.0;
     margin-bottom: 20px;
     text-align: center;
   }
@@ -45,7 +45,10 @@
   
   .button-container button {
     margin-top: 20px;
+    font-size: 24px; /* increase font size to 24px */
+    padding: 10px 20px; /* increase padding to 10px top/bottom and 20px left/right */
   }
+  
   
   @media screen and (max-width: 768px) {
     .about-container {
