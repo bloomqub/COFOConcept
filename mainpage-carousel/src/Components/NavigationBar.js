@@ -8,6 +8,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // importing a FontAwesomeIcon component
 import { faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons"; // importing a FontAwesomeIcon
 import './/CSSCOMPONENTS/NavigationBar.css';
+import {LinkContainer} from 'react-router-bootstrap'
 
 const NavigationBar = () => {
   return (
@@ -32,7 +33,7 @@ const NavigationBar = () => {
 				sticky="top" // Navbar will stick to the top of the page
 			>
 				<Container>
-					<Navbar.Brand href="#home">
+					<Navbar.Brand href="/">
 						{" "}
 						{/* Navbar Brand  */}
 						<div className="logo">
