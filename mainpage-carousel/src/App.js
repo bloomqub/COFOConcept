@@ -1,18 +1,14 @@
-import ".//App.css";
-import Slider from "./Components/Slider";
+import ".//App.css"
 import NavigationBar from "./Components/NavigationBar";
-import About from "./Components/About";
-import Footer from "./Components/Footer";
+import Coverpage from "./Pages/Coverpage"
 
-function UncontrolledExample() {
+function Main() {
   return (
     <>
       <NavigationBar></NavigationBar>
-      <Slider></Slider>
-      <About></About>
-      <Footer></Footer>
+      <Coverpage></Coverpage>
     </>
   );
 }
 
-export default UncontrolledExample;
+export default Main;
