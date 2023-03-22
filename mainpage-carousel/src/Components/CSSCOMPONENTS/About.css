@@ -1,8 +1,9 @@
 .about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 20px;
+    padding: 2px;
     height: 100%;
+    
   }
   
   .picture-container {
@@ -28,6 +29,8 @@
     margin-bottom: 20px;
     text-align: center;
     font-weight: bold;
+    font-family: serif;
+    font-style: italic;
   }
   
   .text-container p {
@@ -36,6 +39,9 @@
     margin-bottom: 20px;
     text-align: center;
     font-weight: bold;
+    font-family: serif;
+    
+
   }
   
   .button-container {
@@ -50,6 +56,8 @@
     font-size: 24px; /* increase font size to 24px */
     padding: 10px 20px; /* increase padding to 10px top/bottom and 20px left/right */
     font-weight: bold; /* make font bold */
+    font-family: serif;
+    font-style: normal;
   }
   
   
