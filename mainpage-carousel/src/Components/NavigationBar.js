@@ -71,7 +71,7 @@ const NavigationBar = () => {
                   Separated link {/*COME BACK AND SOMETHING */}
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#Contact">Contact</Nav.Link>
+              <Nav.Link href="/contact">Contact</Nav.Link>
             </Nav>
             <Nav>
               <Nav.Link href="#Cart">

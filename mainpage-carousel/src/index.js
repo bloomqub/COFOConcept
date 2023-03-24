@@ -7,6 +7,7 @@ import NavigationBar from "./Components/NavigationBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Coverpage from "./Pages/Coverpage";
 import OnDemand from "./Pages/OnDemandPage";
+import Contact from "./Pages/Contact";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +17,7 @@ root.render(
       <Routes>
         <Route exact path="/" Component={Coverpage} />
         <Route path="/OnDemand" Component={OnDemand} />
+        <Route path="/contact" Component={Contact} />
       </Routes>
     </Router>
   </React.StrictMode>
