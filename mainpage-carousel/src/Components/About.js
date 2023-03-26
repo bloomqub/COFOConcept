@@ -22,7 +22,9 @@ export default class About extends Component {
 						of my new clients.
 					</p>
 					<div className="button-container">
+						<a href="#Contact">
 						<Button variant="outline-dark">Contact me</Button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -30,9 +32,4 @@ export default class About extends Component {
 	}
 }
 
-// Notes
-// -------
-// * Make the contact me button centered
-// * Make the picture smaller
-// * Make the picture a circle (maybe)
-// * add href to the button
+

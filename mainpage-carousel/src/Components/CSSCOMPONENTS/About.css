@@ -1,58 +1,74 @@
 .about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
-    height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2px;
+  height: 100%;
+  
+}
+
+.picture-container {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.picture-container img {
+  /* width: 100%; */
+  max-width: 100%;
+  height: auto;
+}
+
+.text-container {
+  background-color:#FFA500;
+  padding: 20px;
+  height: 100%;
+}
+
+.text-container h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: serif;
+  font-style: italic;
+}
+
+.text-container p {
+  font-size: 24px;
+  line-height: 2.0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: serif;
+  
+
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Allows for the contact button to be centered */
+}
+
+.button-container button {
+  margin-top: 20px;
+  font-size: 24px; /* increase font size to 24px */
+  padding: 10px 20px; /* increase padding to 10px top/bottom and 20px left/right */
+  font-weight: bold; /* make font bold */
+  font-family: serif;
+  font-style: normal;
+}
+
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
   }
   
   .picture-container {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+    order: 2; /* Move the image container below the text container */
   }
-  
-  .picture-container img {
-    /* width: 100%; */
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .text-container {
-    background-color:#FFA500;
-    padding: 20px;
-    height: 100%;
-  }
-  
-  .text-container h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .text-container p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .button-container {
-    margin-top: flex;
-    justify-content: center;
-  }
-  .button-container button {
-   margin-top: 20px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .about-container {
-      display: flex;
-      flex-direction: column;
-      height: auto;
-    }
-    
-    .picture-container {
-      order: 2; /* Move the image container below the text container */
-    }
-  }
-  
+}
