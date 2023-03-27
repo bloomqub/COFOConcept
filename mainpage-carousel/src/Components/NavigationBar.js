@@ -8,6 +8,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // importing a FontAwesomeIcon component
 import { faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons"; // importing a FontAwesomeIcon
 import './/CSSCOMPONENTS/NavigationBar.css';
+// import {LinkContainer} from 'react-router-bootstrap'
 
 const NavigationBar = () => {
   return (
@@ -32,13 +33,13 @@ const NavigationBar = () => {
 				sticky="top" // Navbar will stick to the top of the page
 			>
 				<Container>
-					<Navbar.Brand href="#home">
+					<Navbar.Brand href="/">
 						{" "}
 						{/* Navbar Brand  */}
 						<div className="logo">
 							{" "}
 							{/* logo class to style in css */}
-							<span className="cofo">COFO</span>{" "}
+							<span className="cofo">CoFo</span>{" "}
 							{/* cofo class to style in css */}
 							<span className="concept">CONCEPT</span>{" "}
 							{/* concept class to style in css */}
@@ -70,18 +71,17 @@ const NavigationBar = () => {
 									Separated link {/*COME BACK AND SOMETHING */}
 								</NavDropdown.Item>
 							</NavDropdown>
-							<Nav.Link href="#About">About</Nav.Link>
 							<Nav.Link href="#Contact">Contact</Nav.Link>
 						</Nav>
 						<Nav>
 							<Nav.Link href="#Cart">
-								<FontAwesomeIcon icon={faShoppingCart} />{" "}
+								<FontAwesomeIcon icon={faShoppingCart} />{" Cart"}
 								{/* FontAwesomeIcon component for icons(Cart icon) */}
 							</Nav.Link>
 							<Nav.Link eventKey={2} href="#login">
 								{" "}
 								{/* eventKey is used to identify the component */}
-								<FontAwesomeIcon icon={faUser} />{" "}
+								<FontAwesomeIcon icon={faUser} />{" Login"}
 								{/* FontAwesomeIcon component for icons(User icon) */}
 							</Nav.Link>
 							<Nav.Link
