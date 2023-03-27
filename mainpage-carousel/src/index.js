@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Coverpage from "./Pages/Coverpage";
 import OnDemand from "./Pages/OnDemandPage";
 import Contact from "./Pages/Contact";
+import Programs from "./Pages/Programs";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,6 +19,7 @@ root.render(
         <Route exact path="/" Component={Coverpage} />
         <Route path="/OnDemand" Component={OnDemand} />
         <Route path="/contact" Component={Contact} />
+        <Route path="/Programs" Component={Programs} />
       </Routes>
     </Router>
   </React.StrictMode>

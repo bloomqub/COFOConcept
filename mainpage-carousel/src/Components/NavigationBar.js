@@ -8,7 +8,6 @@ import "font-awesome/css/font-awesome.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // importing a FontAwesomeIcon component
 import { faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons"; // importing a FontAwesomeIcon
 import ".//CSSCOMPONENTS/NavigationBar.css";
-import { LinkContainer } from "react-router-bootstrap";
 
 const NavigationBar = () => {
   return (
@@ -54,23 +53,7 @@ const NavigationBar = () => {
               {" "}
               {/* Nav component for navigation */}
               <Nav.Link href="/OnDemand">On Demand</Nav.Link>
-              <NavDropdown title="Programs" id="collasible-nav-dropdown">
-                {" "}
-                {/* NavDropdown component for dropdown menu */}
-                <NavDropdown.Item href="#action/3.1">
-                  {/*COME BACK AND SOMETHING */}
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action {/*COME BACK AND SOMETHING */}
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something {/*COME BACK AND SOMETHING */}
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link {/*COME BACK AND SOMETHING */}
-                </NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Link href="/Programs">Programs</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
             </Nav>
             <Nav>
