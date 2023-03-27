@@ -1,9 +1,9 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import ".//CSSCOMPONENTS/Slider.css"
-import Picture from "/Users/chris/Documents/GitHub/COFOConcept/mainpage-carousel/src/Images/beach6.JPG"
-import GymPic from "/Users/chris/Documents/GitHub/COFOConcept/mainpage-carousel/src/Images/pool pic 7.JPG"
-import ThirdPic from "/Users/chris/Documents/GitHub/COFOConcept/mainpage-carousel/src/Images/pool pic 3.JPG"
+import Picture from "../Images/beach6.JPG"
+import GymPic from "../Images/pool pic 7.JPG"
+import ThirdPic from "../Images/pool pic 3.JPG"
 const Slider = () => {
   return (
     <>
