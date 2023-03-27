@@ -22,7 +22,7 @@ const Slider = () => {
           />
           <Carousel.Caption>
               <h2>Welcome to CoFo Concept!</h2>
-              <p>Testing</p>
+              <p></p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -36,7 +36,7 @@ const Slider = () => {
 
           <Carousel.Caption>
             <h2>“Success usually comes to those who are too busy to be looking for it.”</h2>
-            <p>Testing</p>
+            <p></p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -50,7 +50,7 @@ const Slider = () => {
 
           <Carousel.Caption>
             <h2>"The body achieves what the mind believes."</h2>
-            <p>Testing
+            <p>
             </p>
           </Carousel.Caption>
         </Carousel.Item>
