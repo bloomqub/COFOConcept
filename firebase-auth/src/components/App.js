@@ -4,6 +4,8 @@ import { Container } from "react-bootstrap";
 import { AuthProvider } from "../contexts/AuthContext";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Login from "./Login";
+import HomePage from "./HomePage";
+
 function App() {
   return (
     
@@ -14,6 +16,7 @@ function App() {
           <Router>
             <AuthProvider>
               <Routes>
+                <Route exact path="/" Component={HomePage} />
                 <Route path="/signup" Component={Signup} />
                 <Route path="/login" Component={Login} />
               </Routes>
