@@ -5,7 +5,7 @@ import { useAuth } from '../contexts/AuthContext'
 export default function Login() {
     const emailRef = useRef()
     const passwordRef = useRef()
-    const { signup } = useAuth()
+    const { login } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
 
@@ -27,7 +27,7 @@ export default function Login() {
     <>
         <Card>
             <Card.Body>
-                <h2 className='text-center mb-4'>Sign Up</h2>
+                <h2 className='text-center mb-4'>Log in</h2>
                 {error && <Alert variant='danger'>{error}</Alert> }
                 <Form onSubmit={handleSubmit}>
                     <Form.Group id ="email">
@@ -43,7 +43,7 @@ export default function Login() {
             </Card.Body>
         </Card>
         <div className='w-100 text-center mt-2'>
-            Don't have an Account? Sign up <Link to='/signup'>Sign up</Link>
+            Don't have an Account? Sign up
         </div> 
     </>
     
