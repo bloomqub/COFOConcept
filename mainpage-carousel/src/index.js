@@ -12,17 +12,17 @@ import Programs from "./Pages/Programs";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <Router>
-      <NavigationBar />
-      <Routes>
-        <Route exact path="/" Component={Coverpage} />
-        <Route path="/OnDemand" Component={OnDemand} />
-        <Route path="/contact" Component={Contact} />
-        <Route path="/Programs" Component={Programs} />
-      </Routes>
-    </Router>
-  </React.StrictMode>
+	<React.StrictMode>
+		<Router>
+			<NavigationBar />
+			<Routes>
+				<Route exact path="/" Component={Coverpage} />
+				<Route path="/OnDemand" Component={OnDemand} />
+				<Route path="/contact" Component={Contact} />
+				<Route path="/Programs" Component={Programs} />
+			</Routes>
+		</Router>
+	</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
