@@ -18,7 +18,7 @@ const Slider = () => {
             src={Picture}
             alt="First slide"
             width="100%"
-            height="500px"
+            height="700px"
           />
           <Carousel.Caption>
               <h2>Welcome to CoFo Concept!</h2>
@@ -31,7 +31,7 @@ const Slider = () => {
             src={GymPic}
             alt="Second slide"
             width="100%"
-            height="500px"
+            height="700px"
           />
 
           <Carousel.Caption>
@@ -45,7 +45,7 @@ const Slider = () => {
             src={ThirdPic}
             alt="Third slide"
             width="100%"
-            height="500px"
+            height="700px"
           />
 
           <Carousel.Caption>
