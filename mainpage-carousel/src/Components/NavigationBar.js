@@ -2,7 +2,6 @@ import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // importing a FontAwesomeIcon component
@@ -62,7 +61,7 @@ const NavigationBar = () => {
                 {" Cart"}
                 {/* FontAwesomeIcon component for icons(Cart icon) */}
               </Nav.Link>
-              <Nav.Link eventKey={2} href="#login">
+              <Nav.Link eventKey={2} href="/login">
                 {" "}
                 {/* eventKey is used to identify the component */}
                 <FontAwesomeIcon icon={faUser} />
@@ -70,7 +69,7 @@ const NavigationBar = () => {
                 {/* FontAwesomeIcon component for icons(User icon) */}
               </Nav.Link>
               <Nav.Link
-                href="#SignUp"
+                href="/signup"
                 style={{
                   // inline styling for the Sign Up button
                   backgroundColor: "#FFB85F", // orange
