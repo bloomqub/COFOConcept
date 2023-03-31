@@ -9,18 +9,25 @@ import Coverpage from "./Pages/Coverpage";
 import OnDemand from "./Pages/OnDemandPage";
 import Contact from "./Pages/Contact";
 import Programs from "./Pages/Programs";
+import Signup from "./Pages/Signup";
+import Login from "./Pages/Login";
+import { AuthProvider } from "./contexts/AuthContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
       <NavigationBar />
+      <AuthProvider>
       <Routes>
         <Route exact path="/" Component={Coverpage} />
         <Route path="/OnDemand" Component={OnDemand} />
         <Route path="/contact" Component={Contact} />
         <Route path="/Programs" Component={Programs} />
+        <Route path="/signup" Component={Signup} />
+        <Route path="/login" Component={Login} />
       </Routes>
+      </AuthProvider>
     </Router>
   </React.StrictMode>
 );
