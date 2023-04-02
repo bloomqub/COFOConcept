@@ -10,14 +10,16 @@ import Contact from "./Pages/Contact";
 import Programs from "./Pages/Programs";
 import Signup from "./Pages/Signup";
 import Login from "./Pages/Login";
+import Profile from "./Pages/Profile";
+import ForgotPassword from "./Pages/ForgotPassword";
 import { AuthProvider } from "./contexts/AuthContext";
-import { Container } from "react-bootstrap";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <NavigationBar />
+      
       <AuthProvider>
       <Routes>
         <Route exact path="/" Component={Coverpage} />
@@ -26,6 +28,8 @@ root.render(
         <Route path="/Programs" Component={Programs} />
         <Route path="/signup" Component={Signup} />
         <Route path="/login" Component={Login} />
+        <Route path="/profile" Component={Profile} />
+        <Route path="/forgot-password" Component={ForgotPassword} />
       </Routes>
       </AuthProvider>
     </Router>
