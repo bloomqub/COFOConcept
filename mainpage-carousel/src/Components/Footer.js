@@ -16,52 +16,52 @@ export default function Footer() {
 				<section className="mb-4">
 					{/* <img src={picture} alt='Logo' style={{height: '50px'}} /> */}
 					<a
-						href="#Facebook"
+						href="https://www.facebook.com/profile.php?id=8318387"
 						className="btn btn-primary btn-floating m-1"
 						style={{ backgroundColor: "#3b5998", borderRadius: "50%" }}
 					>
 						<FontAwesomeIcon icon={faFacebook} />
 					</a>
 
-					<a
+					{/* <a
 						href="#Twitter"
 						className="btn btn-primary btn-floating m-1"
 						style={{ backgroundColor: "#55acee", borderRadius: "50%" }}
 					>
 						<FontAwesomeIcon icon={faTwitter} />
-					</a>
+					</a> */}
 
 					<a
-						href="#Instagram"
+						href="https://www.instagram.com/itscourtneyeliz/"
 						className="btn btn-primary btn-floating m-1"
 						style={{ backgroundColor: "#ac2bac", borderRadius: "50%" }}
 					>
 						<FontAwesomeIcon icon={faInstagram} />
 					</a>
 
-					<a
+					{/* <a
 						href="#Linkedin"
 						className="btn btn-primary btn-floating m-1"
 						style={{ backgroundColor: "#0082ca", borderRadius: "50%" }}
 					>
 						<FontAwesomeIcon icon={faLinkedin} />
-					</a>
+					</a> */}
 
 					<a
-						href="#Youtube"
+						href="https://www.youtube.com/@itscourtneyeliz/featured"
 						className="btn btn-primary btn-floating m-1"
 						style={{ backgroundColor: "#FF0000", borderRadius: "50%" }}
 					>
 						<FontAwesomeIcon icon={faYoutube} />
 					</a>
 
-					<a
+					{/* <a
 						href="#Tiktok"
 						className="btn btn-primary btn-floating m-1"
 						style={{ backgroundColor: "#000000", borderRadius: "50%" }}
 					>
 						<FontAwesomeIcon icon={faTiktok} />
-					</a>
+					</a> */}
 				</section>
 			</div>
 
@@ -74,3 +74,6 @@ export default function Footer() {
 		</footer>
 	);
 }
+
+
+//https://www.instagram.com/itscourtneyeliz/

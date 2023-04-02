@@ -1,6 +1,7 @@
 //import { onAuthStateChanged } from 'firebase/auth'
 import React, { useContext, useState, useEffect } from 'react'
 import { auth } from '../contexts/firebase'
+import { getAuth, sendSignInLinkToEmail } from "firebase/auth";
 
 const AuthContext = React.createContext()
 
