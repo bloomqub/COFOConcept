@@ -13,6 +13,7 @@ import Login from "./Pages/Login";
 import Profile from "./Pages/Profile";
 import ForgotPassword from "./Pages/ForgotPassword";
 import { AuthProvider } from "./contexts/AuthContext";
+import Shop from "./Pages/Shop";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -28,6 +29,7 @@ root.render(
         <Route path="/Programs" Component={Programs} />
         <Route path="/signup" Component={Signup} />
         <Route path="/login" Component={Login} />
+        <Route path="/Shop" Component={Shop} />
         <Route path="/profile" Component={Profile} />
         <Route path="/forgot-password" Component={ForgotPassword} />
       </Routes>
