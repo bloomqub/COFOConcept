@@ -1,0 +1,29 @@
+.Header{
+
+}
+.Recent{
+   padding-top: 50px;
+   padding-bottom: 50px;
+   padding-left: 20px;
+   font-weight: bold;
+}
+.Fullbody{
+    padding-bottom: 50px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+.Upperbody{
+    padding-bottom: 50px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+.Lowerbody{
+    padding-bottom: 50px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+.Core{
+    padding-bottom: 50px;
+    padding-left: 20px;
+    font-weight: bold;
+}
