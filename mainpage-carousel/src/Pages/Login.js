@@ -22,7 +22,6 @@ export default function Login() {
             setLoading(true)
             await login(emailRef.current.value, passwordRef.current.value)
             loggedIn = true;
-            console.log(loggedIn);
             navigate("/")
         } catch {
             setError('Failed to log in')
