@@ -1,9 +1,9 @@
 import React from "react";
-import NavigationBar from "../Components/NavigationBar";
+import NavigationBarFinal from "../Components/NavigationBarFinal";
 const Contact = () => {
   return (
     <>
-    <NavigationBar />
+    <NavigationBarFinal />
     <div>
       <h1>Test :D #2</h1>
     </div>

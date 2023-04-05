@@ -1,10 +1,10 @@
 import React from "react";
-import NavigationBar from "../Components/NavigationBar"
+import NavigationBarFinal from "../Components/NavigationBarFinal";
 
 const OnDemand = () => {
   return (
     <>
-    <NavigationBar />
+    <NavigationBarFinal />
     <div>
       <h1>Test :D</h1>
     </div> 
