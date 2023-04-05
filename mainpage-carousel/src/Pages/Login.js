@@ -3,6 +3,8 @@ import { Form, Button, Card, Alert } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useHistory, useNavigate } from 'react-router-dom'
 
+var loggedIn = false;
+
 export default function Login() {
     const emailRef = useRef()
     const passwordRef = useRef()
@@ -19,6 +21,8 @@ export default function Login() {
             setError('')
             setLoading(true)
             await login(emailRef.current.value, passwordRef.current.value)
+            loggedIn = true;
+            console.log(loggedIn);
             navigate("/")
         } catch {
             setError('Failed to log in')

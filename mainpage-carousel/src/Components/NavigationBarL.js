@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // importing a
 import { faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons"; // importing a FontAwesomeIcon
 import ".//CSSCOMPONENTS/NavigationBar.css";
 
-const NavigationBar = () => {
+const NavigationBarL = () => {
   return (
     <>
       <div
@@ -54,34 +54,12 @@ const NavigationBar = () => {
               <Nav.Link href="/OnDemand">On Demand</Nav.Link>
               <Nav.Link href="/Programs">Programs</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
-              <Nav.Link href="/Shop">Shop</Nav.Link>
             </Nav>
             <Nav>
               <Nav.Link href="#Cart">
                 <FontAwesomeIcon icon={faShoppingCart} />
                 {" Cart"}
                 {/* FontAwesomeIcon component for icons(Cart icon) */}
-              </Nav.Link>
-              <Nav.Link eventKey={2} href="/login">
-                {" "}
-                {/* eventKey is used to identify the component */}
-                <FontAwesomeIcon icon={faUser} />
-                {" Login"}
-                {/* FontAwesomeIcon component for icons(User icon) */}
-              </Nav.Link>
-              <Nav.Link className="SIGNUPBAR"
-                href="/signup"
-                style={{
-                  // inline styling for the Sign Up button
-                  backgroundColor: "#FFB85F", // orange
-                  color: "white",
-                  borderRadius: "20px", // rounded corners
-                  padding: "10px 20px",
-                  fontWeight: "bold",
-                  transition: "all 0.3s ease-in-out", // transition for hover effect
-                }}
-              >
-                SIGN UP!
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -90,4 +68,4 @@ const NavigationBar = () => {
     </>
   );
 };
-export default NavigationBar;
+export default NavigationBarL;
