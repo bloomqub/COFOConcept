@@ -1,57 +1,47 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import FloatingLabel from 'react-bootstrap/FloatingLabel'
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import NavigationBarFinal from '../Components/NavigationBarFinal';
 
 function Contact() {
   return (
     <>
-    <NavigationBarFinal/>
-    <Form>
-      <div> <h1>Contact me!</h1> </div>
-      <p> If you have any questions fill out the form below</p>
-      <Form.Group className="mb-3" controlId="ContactPageform">
-        <Form.Label>Name</Form.Label>
-        <Form.Control type="Name" placeholder="Name" />
-        <Form.Text className="text-muted">
-  
-        </Form.Text>
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email</Form.Label>
-        <Form.Control type="Email" placeholder="Email Address" />
-        <Form.Text className="text-muted">
-
-        </Form.Text>
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formBasicSubject">
-        <Form.Label>Subject</Form.Label>
-        <Form.Control type="Subject" placeholder="Subject" />
-        <Form.Text className="text-muted">
-        
-        </Form.Text>
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formBasicComments ">
-        <Form.Label>Comments</Form.Label>
-      <FloatingLabel controlId="floatingTextarea2" label="Comments">
-        <Form.Control
-          as="textarea"
-          placeholder="Leave a comment here"
-          style={{ height: '100px' }}
-        />
-      </FloatingLabel>
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Send me copy" />
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
+      <NavigationBarFinal />
+      <div className="container mt-5 mb-5">
+        <div className="row justify-content-center">
+          <div className="col-md-6">
+            <Form>
+              <h1 className="text-center mb-4">Contact me</h1>
+              <Form.Group controlId="formBasicName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter your name" />
+              </Form.Group>
+              <Form.Group controlId="formBasicEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control type="email" placeholder="Enter your email" />
+              </Form.Group>
+              <Form.Group controlId="formBasicSubject">
+                <Form.Label>Subject</Form.Label>
+                <Form.Control type="text" placeholder="Enter your subject" />
+              </Form.Group>
+              <Form.Group controlId="formBasicMessage">
+                <Form.Label>Message</Form.Label>
+                <FloatingLabel controlId="floatingTextarea2" label="Message">
+                  <Form.Control as="textarea" placeholder="Enter your message" style={{ height: '150px' }} />
+                </FloatingLabel>
+              </Form.Group>
+              <Form.Group controlId="formBasicCheckbox">
+                <Form.Check type="checkbox" label="Send me a copy of this message" />
+              </Form.Group>
+              <div className="text-center">
+                <Button variant="primary" type="submit">
+                  Submit
+                </Button>
+              </div>
+            </Form>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
