@@ -1,0 +1,43 @@
+/* Style the form label and input fields */
+label {
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="message"],
+  textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Style the checkbox label */
+  .checkbox-label {
+    font-weight: normal;
+  }
+  
+  /* Style the ReCAPTCHA container */
+  .recaptcha-container {
+    margin-bottom: 10px;
+  }
+  
+  /* Style the submit button */
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Disable the submit button when the captcha is not completed */
+  button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  

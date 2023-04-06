@@ -3,8 +3,8 @@ import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import NavigationBarFinal from "../Components/NavigationBarFinal";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useState, useRef, useEffect } from "react";
-
+import { useState } from "react";
+import "./CSSPages/Contact.css";
 
 function Contact() {
 	const [captchaIsDone, setCaptchaDone] = useState(false);
@@ -36,10 +36,13 @@ function Contact() {
 							</Form.Group>
 							<Form.Group controlId="formBasicMessage">
 								<Form.Label>Message</Form.Label>
-								<FloatingLabel controlId="floatingTextarea2" label="Message">
+								<FloatingLabel
+									controlId="formBasicMessage"
+									label="Enter your message"
+									className="mb-3"
+								>
 									<Form.Control
 										as="textarea"
-										placeholder="Enter your message"
 										style={{ height: "150px" }}
 									/>
 								</FloatingLabel>
