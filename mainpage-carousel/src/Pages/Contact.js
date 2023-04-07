@@ -48,10 +48,10 @@ function Contact() {
 								</FloatingLabel>
 							</Form.Group>
 							<Form.Group controlId="formBasicCheckbox">
-								<Form.Check
+								{/* <Form.Check
 									type="checkbox"
 									label="Send me a copy of this message"
-								/>
+								/> */}
 							</Form.Group>
 							<ReCAPTCHA
 								sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
