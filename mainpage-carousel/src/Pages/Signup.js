@@ -30,10 +30,16 @@ export default function Signup() {
         }
         setLoading(false)
     }
+    function handleGoBack() {
+        navigate(-1);
+    }
 
   return (
     <>
         <Card>
+        <div className=''>
+        <Button onClick={handleGoBack}>Back</Button>
+        </div>
             <Card.Body>
                 <h2 className='text-center mb-4'>Sign Up</h2>
                 {error && <Alert variant='danger'>{error}</Alert> }

@@ -8,13 +8,12 @@ import {
 	faYoutube,
 	faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
-// import picture from '../Images/The CoFo Concept 2.png';
+
 export default function Footer() {
 	return (
-		<footer className="bg-white text-center text-white">
-			<div className="container p-4 pb-0">
+		<footer className="bg-black text-center text-white">
+			<div className="container p-4 pb-0 bg-black">
 				<section className="mb-4">
-					{/* <img src={picture} alt='Logo' style={{height: '50px'}} /> */}
 					<a
 						href="https://www.facebook.com/profile.php?id=8318387"
 						className="btn btn-primary btn-floating m-1"
@@ -22,14 +21,6 @@ export default function Footer() {
 					>
 						<FontAwesomeIcon icon={faFacebook} />
 					</a>
-
-					{/* <a
-						href="#Twitter"
-						className="btn btn-primary btn-floating m-1"
-						style={{ backgroundColor: "#55acee", borderRadius: "50%" }}
-					>
-						<FontAwesomeIcon icon={faTwitter} />
-					</a> */}
 
 					<a
 						href="https://www.instagram.com/itscourtneyeliz/"
@@ -39,14 +30,6 @@ export default function Footer() {
 						<FontAwesomeIcon icon={faInstagram} />
 					</a>
 
-					{/* <a
-						href="#Linkedin"
-						className="btn btn-primary btn-floating m-1"
-						style={{ backgroundColor: "#0082ca", borderRadius: "50%" }}
-					>
-						<FontAwesomeIcon icon={faLinkedin} />
-					</a> */}
-
 					<a
 						href="https://www.youtube.com/@itscourtneyeliz/featured"
 						className="btn btn-primary btn-floating m-1"
@@ -54,14 +37,6 @@ export default function Footer() {
 					>
 						<FontAwesomeIcon icon={faYoutube} />
 					</a>
-
-					{/* <a
-						href="#Tiktok"
-						className="btn btn-primary btn-floating m-1"
-						style={{ backgroundColor: "#000000", borderRadius: "50%" }}
-					>
-						<FontAwesomeIcon icon={faTiktok} />
-					</a> */}
 				</section>
 			</div>
 
@@ -74,6 +49,3 @@ export default function Footer() {
 		</footer>
 	);
 }
-
-
-//https://www.instagram.com/itscourtneyeliz/

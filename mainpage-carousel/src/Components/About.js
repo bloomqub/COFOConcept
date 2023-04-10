@@ -22,7 +22,7 @@ export default class About extends Component {
 						of my new clients.
 					</p>
 					<div className="button-container">
-						<a href="#Contact">
+						<a href="/contact">
 						<Button variant="outline-dark">Contact me</Button>
 						</a>
 					</div>
