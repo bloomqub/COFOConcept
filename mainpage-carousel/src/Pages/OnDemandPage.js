@@ -2,6 +2,7 @@ import React from "react";
 import NavigationBarFinal from "../Components/NavigationBarFinal";
 import PropTypes from "prop-types";
 import "./CSSPages/OnDemandPage.css";
+import Footer from "../Components/Footer";
 
 const OnDemandPage = () => {
 	return (
@@ -43,6 +44,7 @@ const OnDemandPage = () => {
 					thumbnailUrl="https://via.placeholder.com/150"
 				/>
 			</section>
+			<Footer />
 		</>
 	);
 };
