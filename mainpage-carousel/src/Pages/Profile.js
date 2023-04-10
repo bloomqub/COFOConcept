@@ -20,10 +20,17 @@ export default function Profile() {
             setError('Failed to log out')
         }
     } 
+    function handleGoBack() {
+        navigate(-1);
+    }
 
   return (
     <>
+       
         <Card>
+        <div className=''>
+        <Button onClick={handleGoBack}>Back</Button>
+        </div>
             <Card.Body>
                 <h2 className='text-center mb-4'>Profile</h2>
                 {error && <Alert variant='danger'>{error}</Alert> }

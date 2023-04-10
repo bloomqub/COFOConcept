@@ -66,7 +66,7 @@ const NavigationBarL = () => {
 								{/* FontAwesomeIcon component for icons(Cart icon) */}
 							</Nav.Link>
 							<Nav.Link href="/profile">
-								<FontAwesomeIcon icon={faUserCircle} size="xl" />
+								<FontAwesomeIcon icon={faUserCircle} size="lg" />
 								Profile
 							</Nav.Link>
 						</Nav>
