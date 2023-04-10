@@ -30,9 +30,15 @@ export default function Signup() {
         }
         setLoading(false)
     }
+    function handleGoBack() {
+        navigate("/");
+    }
 
   return (
     <>
+        <div className=''>
+        <Button onClick={handleGoBack}>Back</Button>
+        </div>
         <Card>
             <Card.Body>
                 <h2 className='text-center mb-4'>Sign Up</h2>

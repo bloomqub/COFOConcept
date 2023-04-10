@@ -28,9 +28,15 @@ export default function Login() {
         }
         setLoading(false)
     }
+    function handleGoBack() {
+        navigate("/");
+    }
 
   return (
     <>
+        <div className=''>
+        <Button onClick={handleGoBack}>Back</Button>
+        </div>
         <Card>
             <Card.Body>
                 <h2 className='text-center mb-4'>Log In</h2>
