@@ -14,6 +14,7 @@ import Profile from "./Pages/Profile";
 import ForgotPassword from "./Pages/ForgotPassword";
 import { AuthProvider } from "./contexts/AuthContext";
 import Shop from "./Pages/Shop";
+import UpdateProfile from "./Pages/UpdateProfile";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -31,6 +32,7 @@ root.render(
         <Route path="/Shop" Component={Shop} />
         <Route path="/profile" Component={Profile} />
         <Route path="/forgot-password" Component={ForgotPassword} />
+        <Route path="/update-profile" Component={UpdateProfile}/>
       </Routes>
       </AuthProvider>
     </Router>

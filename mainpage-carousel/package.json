@@ -16,6 +16,7 @@
     "firebase": "^9.19.1",
     "font-awesome": "^4.7.0",
     "mdb-react-ui-kit": "^5.1.0",
+    "ng2-google-recaptcha": "^5.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
