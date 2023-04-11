@@ -57,7 +57,7 @@ const NavigationBar = () => {
 							{" "}
 							{/* Nav component for navigation */}
 							<Nav.Link href="/OnDemand">On Demand</Nav.Link>
-							<Nav.Link href="/Programs">Programs</Nav.Link>
+							<Nav.Link href="/classes">Classes</Nav.Link>
 							<Nav.Link href="/contact">Contact</Nav.Link>
 							<Nav.Link href="/Shop">Shop</Nav.Link>
 						</Nav>
