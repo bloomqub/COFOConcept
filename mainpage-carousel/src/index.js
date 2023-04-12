@@ -7,13 +7,15 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Coverpage from "./Pages/Coverpage";
 import OnDemand from "./Pages/OnDemandPage";
 import Contact from "./Pages/Contact";
-import Programs from "./Pages/Programs";
+import Classes from "./Pages/Classes";
 import Signup from "./Pages/Signup";
 import Login from "./Pages/Login";
 import Profile from "./Pages/Profile";
 import ForgotPassword from "./Pages/ForgotPassword";
 import { AuthProvider } from "./contexts/AuthContext";
 import Shop from "./Pages/Shop";
+import UpdateProfile from "./Pages/UpdateProfile";
+import PrivateRoute from "./Components/PrivateRoute";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -25,12 +27,13 @@ root.render(
         <Route exact path="/" Component={Coverpage} />
         <Route path="/OnDemand" Component={OnDemand} />
         <Route path="/contact" Component={Contact} />
-        <Route path="/Programs" Component={Programs} />
+        <Route path="/classes" Component={Classes} />
         <Route path="/signup" Component={Signup} />
         <Route path="/login" Component={Login} />
         <Route path="/Shop" Component={Shop} />
-        <Route path="/profile" Component={Profile} />
+        <Route path="/profile" element={<PrivateRoute> <Profile/> </PrivateRoute>} />
         <Route path="/forgot-password" Component={ForgotPassword} />
+        <Route path="/update-profile" Component={UpdateProfile}/>
       </Routes>
       </AuthProvider>
     </Router>

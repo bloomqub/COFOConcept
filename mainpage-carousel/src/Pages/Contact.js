@@ -5,6 +5,7 @@ import NavigationBarFinal from "../Components/NavigationBarFinal";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useState } from "react";
 import "./CSSPages/Contact.css";
+import Footer from "../Components/Footer";
 
 function Contact() {
 	const [captchaIsDone, setCaptchaDone] = useState(false);
@@ -71,6 +72,7 @@ function Contact() {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 }
