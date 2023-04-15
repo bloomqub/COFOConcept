@@ -143,3 +143,5 @@ export default Contact;
 //npm install dotenv
 // npm install --save react-recaptcha
 //npm install react-google-recaptcha
+//npm install emailjs-com
+//
