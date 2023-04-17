@@ -14,7 +14,7 @@ import ".//CSSCOMPONENTS/NavigationBar.css";
 const NavigationBarL = () => {
 	return (
 		<>
-			{/* <div
+			<div
         style={{
           // inline styling for the top banner
           backgroundColor: "orange",
@@ -22,10 +22,11 @@ const NavigationBarL = () => {
           textAlign: "center",
           fontSize: "18px",
           fontWeight: "bold",
+		  animation: "slidein 1s",
         }}
       >
         Start Your Free Trial and Join The Concept Today!
-      </div> */}
+      </div>
 			<Navbar // creating a Navbar component
 				collapseOnSelect // Navbar will collapse on smaller screens
 				expand="lg" // Navbar will expand on larger screens
