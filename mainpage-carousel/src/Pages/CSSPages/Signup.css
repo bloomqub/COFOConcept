@@ -1,0 +1,16 @@
+.back-btn:hover {
+    background-color: #d88d02;
+    border-color: #d88d02;
+}
+.back-btn {
+    background-color: #FFA500;
+    border-color: #FFA500;
+}
+
+.card button {
+    background-color: #FFA500;
+}
+.card button:hover {
+    background-color: #d88d02;
+    border-color: #d88d02;
+}

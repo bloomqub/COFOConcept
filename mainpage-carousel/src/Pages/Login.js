@@ -35,10 +35,8 @@ export default function Login() {
 
 	return (
 		<>
+			<Button className="back-btn" onClick={handleGoBack}>Back</Button>
 			<Card>
-				<div className="login-card-btn">
-					<Button onClick={handleGoBack}>Back</Button>
-				</div>
 				<Card.Body className="card-body-login">
 					<h2 className="text-center mb-4">Log In</h2>
 					{error && <Alert variant="danger">{error}</Alert>}
