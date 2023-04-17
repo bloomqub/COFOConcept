@@ -1,0 +1,17 @@
+.card button {
+    background-color: #FFA500;
+}
+.card button:hover {
+    background-color: #d88d02;
+    border-color: #d88d02;
+}
+.btn {
+    background-color: #FFA500;
+    border-radius: 20px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    text-decoration-style: none;
+    border-color: #FFA500;
+}
