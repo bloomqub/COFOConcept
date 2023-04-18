@@ -1,5 +1,7 @@
 .card button {
     background-color: #FFA500;
+    border-radius: 20px;
+    
 }
 .card button:hover {
     background-color: #d88d02;
