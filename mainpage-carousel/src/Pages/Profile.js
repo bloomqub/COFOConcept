@@ -3,7 +3,6 @@ import { Alert, Button, Card } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useNavigate } from 'react-router-dom'
 import loggedIn from "../Pages/Login";
-import "./CSSPages/Profile.css";
 
 export default function Profile() {
     const [error, setError] = useState("")
@@ -27,6 +26,7 @@ export default function Profile() {
 
   return (
     <>
+       
         <Card>
         <div className=''>
         <Button onClick={handleGoBack}>Back</Button>
@@ -38,11 +38,9 @@ export default function Profile() {
                 <Link to="/update-profile" className='btn btn-primary w-100 mt-10'> Update Profile</Link>
             </Card.Body>
         </Card>
-        <div className='logout-btn'>
         <div className='w-100 text-center mt-2'>
-            <Button onClick={handleLogout}>Log Out </Button>
+            <Button variant='link' onClick={handleLogout}>Log Out </Button>
         </div> 
-        </div>
     </>
   )
 }
