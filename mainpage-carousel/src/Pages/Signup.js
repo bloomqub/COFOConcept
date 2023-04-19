@@ -38,9 +38,7 @@ export default function Signup() {
 
   return (
     <>
-        <div className='back-btn-div'>
-            <Button className="back-btn" onClick={handleGoBack}>Back</Button>
-        </div>
+        <Button className="back-btn" onClick={handleGoBack}>Back</Button>
         <Card>
             <Card.Body>
                 <img href={logo} />

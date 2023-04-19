@@ -7,7 +7,22 @@
     border-color: #FFA500;
 
 }
-.back-btn:focus {
+.back-btn:active {
     background-color: #FFA500;
+    border-color: #FFA500;
+}
+.card button {
+    background-color: #FFA500;
+}
+.card button:hover {
+    background-color: #d88d02;
+    border-color: #d88d02;
+}
+.btn {
+    background-color: #FFA500;
+    border-radius: 20px;
+    width: 100px;
+    margin: 0 auto 20px;
+    text-decoration-style: none;
     border-color: #FFA500;
 }
