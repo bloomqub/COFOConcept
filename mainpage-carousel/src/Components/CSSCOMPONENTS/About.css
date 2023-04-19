@@ -40,8 +40,6 @@
   text-align: center;
   font-weight: bold;
   font-family: serif;
-  
-
 }
 
 .button-container {
@@ -49,6 +47,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; /* Allows for the contact button to be centered */
+  outline: #000000 2px;
 }
 
 .button-container button {
