@@ -33,13 +33,13 @@ export default function Signup() {
         setLoading(false)
     }
     function handleGoBack() {
-        navigate(-1);
+        navigate("/");
     }
 
   return (
     <>
         <Button className="back-btn" onClick={handleGoBack}>Back</Button>
-        <Card>
+        <Card className="wholecard">
             <Card.Body>
                 <img href={logo} />
                 <h2 className='text-center mb-4'>Sign Up</h2>

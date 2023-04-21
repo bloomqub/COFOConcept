@@ -72,8 +72,8 @@ const Classes = () => {
 						</div>
 						<div className="row justify-content-center">
 							<div className="col-md-6 text-center">
-								<form
-									action="https://www.google.com/url?q=https://www.paypal.com/cgi-bin/webscr&source=gmail-imap&ust=1681833886000000&usg=AOvVaw3n2_o7EzTJCm7gTiok-G9g"
+							<form
+									action="https://www.paypal.com/cgi-bin/webscr"
 									method="post"
 									target="_top"
 								>
@@ -118,14 +118,14 @@ const Classes = () => {
 													<option value="6 week Challenge">
 														6 week Challenge $100.00 USD
 													</option>
-												</select>{" "}
+												</select>
 											</td>
 										</tr>
 									</table>
 									<input type="hidden" name="currency_code" value="USD"></input>
 									<input
 										type="image"
-										src="https://www.google.com/url?q=https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif&source=gmail-imap&ust=1681833886000000&usg=AOvVaw2ug5fumrmrVY-8iUcY7ouZ"
+										src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif"
 										border="0"
 										name="submit"
 										alt="PayPal - The safer, easier way to pay online!"
@@ -133,7 +133,7 @@ const Classes = () => {
 									<img
 										alt=""
 										border="0"
-										src="https://www.google.com/url?q=https://www.paypalobjects.com/en_US/i/scr/pixel.gif&source=gmail-imap&ust=1681833886000000&usg=AOvVaw2xBx7S2FHaElS0t3IuIb6-"
+										src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
 										width="1"
 										height="1"
 									></img>
