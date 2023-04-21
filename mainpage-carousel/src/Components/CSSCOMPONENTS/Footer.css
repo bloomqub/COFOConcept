@@ -1,0 +1,47 @@
+
+
+a:hover {
+    text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-left: 14px;
+}
+.social-icon a {
+    width: 42px;
+    height: 42px;
+    background: #ffffff00;
+    display: inline-flex;
+    border-radius: 50%;
+    margin-right: 6px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    color: #fff;
+  }
+  .social-icon a::before {
+    content: "";
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    background: #fff;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.5s ease-in-out;
+  }
+  .social-icon a:hover::before {
+    transform: scale(1);
+  }
+  .social-icon a img {
+    width: 40%;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+  }

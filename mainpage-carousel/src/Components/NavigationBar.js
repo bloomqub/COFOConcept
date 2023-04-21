@@ -35,7 +35,6 @@ const NavigationBar = () => {
 				variant="light" // Navbar will have a light variant
 				sticky="top" // Navbar will stick to the top of the page
 			>
-				<Container>
 					<Navbar.Brand href="/">
 						{" "}
 						{/* Navbar Brand  */}
@@ -86,7 +85,6 @@ const NavigationBar = () => {
 							</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
-				</Container>
 			</Navbar>
 		</>
 	);

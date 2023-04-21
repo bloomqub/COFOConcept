@@ -1,48 +1,46 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faFacebook,
-	faTwitter,
-	faInstagram,
-	faLinkedin,
-	faYoutube,
-	faTiktok,
-} from "@fortawesome/free-brands-svg-icons";
+import facebook from "../cofo-img/facebook.svg";
+import youtube from "../cofo-img/youtube.svg";
+import instagram from "../cofo-img/instagram.svg";
+import LOGO from "../cofo-img/CoFoLogo.png";
+import "./CSSCOMPONENTS/Footer.css"
+
 
 export default function Footer() {
 	return (
-		<footer className="bg-black text-center text-white">
-			<div className="container p-4 pb-0 bg-black">
+		<footer className="text-center text-black" style={{
+			background: "#FFA500",
+			border: "5px solid black"
+		}}>
+			<div className="p-4 pb-0">
 				<section className="mb-4">
-					<a
-						href="https://www.facebook.com/profile.php?id=8318387"
-						className="btn btn-primary btn-floating m-1"
-						style={{ backgroundColor: "#3b5998", borderRadius: "50%" }}
-					>
-						<FontAwesomeIcon icon={faFacebook} />
-					</a>
+					<span className="inline-images">
+						
+						<div className="social-icon">
+							<a
+								href="https://www.facebook.com/profile.php?id=8318387"
+							>
+								<img src={facebook} />
+							</a>
 
-					<a
-						href="https://www.instagram.com/itscourtneyeliz/"
-						className="btn btn-primary btn-floating m-1"
-						style={{ backgroundColor: "#ac2bac", borderRadius: "50%" }}
-					>
-						<FontAwesomeIcon icon={faInstagram} />
-					</a>
+							<a
+								href="https://www.instagram.com/itscourtneyeliz/"
+							>
+								<img src={instagram}/>
+							</a>
 
-					<a
-						href="https://www.youtube.com/@itscourtneyeliz/featured"
-						className="btn btn-primary btn-floating m-1"
-						style={{ backgroundColor: "#FF0000", borderRadius: "50%" }}
-					>
-						<FontAwesomeIcon icon={faYoutube} />
-					</a>
+							<a
+								href="https://www.youtube.com/@itscourtneyeliz/featured"
+							>
+								<img src={youtube}/>
+							</a>
+						</div>
+					</span>
 				</section>
 			</div>
 
 			<div
-				className="text-center p-3"
-				style={{ backgroundColor: "rgba(0, 0, 0, 1)" }}
+			className="footer-year-text"
 			>
 				© {new Date().getFullYear()} CoFo Concept
 			</div>
