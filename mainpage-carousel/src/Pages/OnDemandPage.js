@@ -4,6 +4,9 @@ import "./CSSPages/OnDemandPage.css";
 import Footer from "../Components/Footer";
 import ReactPlayer from "react-player";
 import { Card, Button } from "react-bootstrap";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import Profile1 from "../Images/gym pic 3.JPG";
 import Profile2 from "../Images/gym pic 4.JPG";
 import Profile3 from "../Images/gym pic 5.JPG";
@@ -15,6 +18,17 @@ const OnDemandPage = () => {
 	const [showVideo, setShowVideo] = useState(false);
 	const [videoUrl, setVideoUrl] = useState("");
 	const [videoTitle, setVideoTitle] = useState("");
+	const auth = getAuth();
+	const user = auth.currentUser;
+	const navigate = useNavigate();
+
+	function authCheck() {
+		if (user) {
+			return navigate("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV77LMWL2NZ6U");
+		} else {
+			return navigate("/signup");
+		}
+	}
 
 	const handleViewClick = (title, url) => {
 		setShowVideo(true);
@@ -48,17 +62,19 @@ const OnDemandPage = () => {
 							style={{ height: "100%", width: "100%" }}
 						/>
 						<Card.Body>
-							<Card.Title>
-								Ultimate Back Workout
-							</Card.Title>
+							<Card.Title>Ultimate Back Workout</Card.Title>
 							<Card.Subtitle className="mb-2">
-							Tone, Define and Strengthen Your Back
+								Tone, Define and Strengthen Your Back
 							</Card.Subtitle>
 							<Button
 								variant="primary"
-								onClick={() =>
-									handleViewClick("Ultimate Back Workout", "https://youtu.be/iGVZszacXkk")
-								}
+								onClick={() => {
+									authCheck();
+									handleViewClick(
+										"Ultimate Back Workout",
+										"https://youtu.be/iGVZszacXkk"
+									);
+								}}
 							>
 								View Workout
 							</Button>
@@ -73,7 +89,7 @@ const OnDemandPage = () => {
 						<Card.Body>
 							<Card.Title>Stronger Together</Card.Title>
 							<Card.Subtitle className="mb-2">
-							Full Body Community Workout 
+								Full Body Community Workout
 							</Card.Subtitle>
 							<Button
 								variant="primary"
@@ -97,9 +113,17 @@ const OnDemandPage = () => {
 						<Card.Body>
 							<Card.Title>Ultimate Burnout</Card.Title>
 							<Card.Subtitle className="mb-2">
-							High-Intensity Full Body Workout
+								High-Intensity Full Body Workout
 							</Card.Subtitle>
-							<Button variant="primary" onClick={() => handleViewClick("Ultimate Burnout", "https://youtu.be/awGOrhDgacU")}>
+							<Button
+								variant="primary"
+								onClick={() =>
+									handleViewClick(
+										"Ultimate Burnout",
+										"https://youtu.be/awGOrhDgacU"
+									)
+								}
+							>
 								View Workout
 							</Button>
 						</Card.Body>
@@ -113,9 +137,17 @@ const OnDemandPage = () => {
 						<Card.Body>
 							<Card.Title>Tricep Toning </Card.Title>
 							<Card.Subtitle className="mb-2">
-							Target Your Triceps and Tone Your Arms
+								Target Your Triceps and Tone Your Arms
 							</Card.Subtitle>
-							<Button variant="primary" onClick={() => handleViewClick("Tricep Toning", "https://youtu.be/a1BvPwTokYU")}>
+							<Button
+								variant="primary"
+								onClick={() =>
+									handleViewClick(
+										"Tricep Toning",
+										"https://youtu.be/a1BvPwTokYU"
+									)
+								}
+							>
 								View Workout
 							</Button>
 						</Card.Body>
@@ -155,9 +187,32 @@ const OnDemandPage = () => {
 			<section className="subscribe">
 				<h2>Subscribe Today</h2>
 				<p>Don't miss out on our latest on-demand workout videos!</p>
-				<Button href="/signup" variant="success">
-					Subscribe Now
-				</Button>
+				<form
+					action="https://www.paypal.com/cgi-bin/webscr"
+					method="post"
+					target="_top"
+				>
+					<input type="hidden" name="cmd" value="_s-xclick"></input>
+					<input
+						type="hidden"
+						name="hosted_button_id"
+						value="HV77LMWL2NZ6U"
+					></input>
+					<input
+						type="image"
+						src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
+						border="0"
+						name="submit"
+						alt="PayPal - The safer, easier way to pay online!"
+					></input>
+					<img
+						alt=""
+						border="0"
+						src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+						width="1"
+						height="1"
+					></img>
+				</form>
 			</section>
 			<Footer />
 		</>
