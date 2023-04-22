@@ -24,11 +24,12 @@ const OnDemandPage = () => {
 
 	function authCheck() {
 		if (user) {
-			return navigate("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV77LMWL2NZ6U");
+			window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV77LMWL2NZ6U";
 		} else {
-			return navigate("/signup");
+			window.location.href = "/signup";
 		}
 	}
+	
 
 	const handleViewClick = (title, url) => {
 		setShowVideo(true);
