@@ -1,9 +1,44 @@
-.category {
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
+}
+
+.category {
+  padding: 1rem;
 }
 
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 1rem; 
+}
+
+.subscribe{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 0.5rem;
+  }
+  .header, .subscribe {
+    padding: 1rem;
+  }
 }

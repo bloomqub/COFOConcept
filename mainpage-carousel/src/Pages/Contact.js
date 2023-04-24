@@ -9,24 +9,23 @@ import Footer from "../Components/Footer";
 import emailjs from "emailjs-com";
 import{useEffect} from 'react';
 
+// email service and template IDs for sending email
 const serviceId = "service_88f6uzo";
 const templateId = "template_9pyn2nh";
 const userId = "cbHVCN5PjSJiOARoO";
 
-// const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-// const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-// const userId = process.env.REACT_APP_EMAILJS_USER_ID;
-
-
 function Contact() {
+  // state for captcha completion and form submission
 	const [captchaIsDone, setCaptchaDone] = useState(false);
 	const [formisdone, setformisdone] = useState(false);
 
+  // function to set captcha completion state
 	function onChange() {
 		console.log("Captcha done");
 		setCaptchaDone(true);
 	}
 
+  // function to send email on form submission
 	function sendEmail(event) {
 		event.preventDefault();
 		if (captchaIsDone) {
@@ -43,6 +42,7 @@ function Contact() {
 				message: message,
 			};
 
+      // send email using emailjs library
 			emailjs
 				.send(serviceId, templateId, templateParams, userId)
 				.then(function (response) {
@@ -51,17 +51,20 @@ function Contact() {
 						setformisdone(true);
 					}
 				})
-				.catch(function (error) {
+				.catch(function (error) { // if email fails to send
 					console.log("FAILED...", error);
 				});
 		}
 		
 	}
+
+  // reload page after successful form submission
 	useEffect(() => {
 		if (formisdone) {
 			window.location.reload();
 		}
 	}, [formisdone]);
+
 
 	return (
 		<>
@@ -119,7 +122,7 @@ function Contact() {
 									label="Send me a copy of this message"
 								/> */}
 							</Form.Group>
-							<ReCAPTCHA
+							<ReCAPTCHA  // recaptcha component
 								sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
 								size="normal"
 								onChange={onChange}
@@ -128,7 +131,7 @@ function Contact() {
 								<Button
 									variant="primary"
 									type="submit"
-									disabled={!captchaIsDone}
+									disabled={!captchaIsDone} // disable submit button until captcha is completed
 								>
 									Submit
 								</Button>
@@ -143,9 +146,3 @@ function Contact() {
 }
 
 export default Contact;
-
-//npm install dotenv
-// npm install --save react-recaptcha
-//npm install react-google-recaptcha
-//npm install emailjs-com
-//

@@ -1,51 +1,64 @@
 import React, { useState } from "react";
-import NavigationBarFinal from "../Components/NavigationBarFinal";
-import "./CSSPages/OnDemandPage.css";
-import Footer from "../Components/Footer";
-import ReactPlayer from "react-player";
-import { Card, Button } from "react-bootstrap";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import Profile1 from "../Images/gym pic 3.JPG";
-import Profile2 from "../Images/gym pic 4.JPG";
-import Profile3 from "../Images/gym pic 5.JPG";
-import Profile4 from "../Images/gym pic 6.JPG";
-import Profile5 from "../Images/weight pic.JPG";
-import Profile6 from "../Images/Community.png";
+import NavigationBarFinal from "../Components/NavigationBarFinal"; // Importing NavigationBarFinal component from the Components folder
+import "./CSSPages/OnDemandPage.css"; // Importing OnDemandPage.css file for styling
+import Footer from "../Components/Footer"; // Importing Footer component from the Components folder
+import ReactPlayer from "react-player"; // Importing ReactPlayer component
+import { Card, Button } from "react-bootstrap"; // Importing Card and Button components from react-bootstrap
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Importing Router, Routes, and Route components from react-router-dom
+import { useNavigate } from "react-router-dom"; // Importing useNavigate hook from react-router-dom
+import { getAuth, onAuthStateChanged } from "firebase/auth"; // Importing getAuth and onAuthStateChanged functions from firebase/auth
+import Profile1 from "../Images/gym pic 3.JPG"; // Importing image file from the Images folder
+import Profile2 from "../Images/gym pic 4.JPG"; // Importing image file from the Images folder
+import Profile3 from "../Images/gym pic 5.JPG"; // Importing image file from the Images folder
+import Profile4 from "../Images/gym pic 6.JPG"; // Importing image file from the Images folder
+import Profile5 from "../Images/weight pic.JPG"; // Importing image file from the Images folder
+import Profile6 from "../Images/Community.png"; // Importing image file from the Images folder
 
 const OnDemandPage = () => {
-	const [showVideo, setShowVideo] = useState(false);
-	const [videoUrl, setVideoUrl] = useState("");
-	const [videoTitle, setVideoTitle] = useState("");
+	// Declaring state variables using the useState hook
+	const [showVideo, setShowVideo] = useState(false); // showVideo state variable controls whether or not the video player is displayed
+	const [videoUrl, setVideoUrl] = useState(""); // videoUrl state variable stores the URL of the video to be displayed
+	const [videoTitle, setVideoTitle] = useState(""); // videoTitle state variable stores the title of the video to be displayed
+
+	// Initializing Firebase authentication
 	const auth = getAuth();
+
+	// Retrieving the currently logged in user
 	const user = auth.currentUser;
+
+	// Initializing the useNavigate hook to navigate to different pages
 	const navigate = useNavigate();
 
+	// Function that checks if the user is authenticated and redirects to the appropriate page
 	function authCheck() {
 		if (user) {
-			window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV77LMWL2NZ6U";
+			window.location.href =
+				"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV77LMWL2NZ6U";
 		} else {
 			window.location.href = "/signup";
 		}
 	}
-	
 
+	// Event handler for when the button "view workout" is clicked
 	const handleViewClick = (title, url) => {
-		setShowVideo(true);
-		setVideoUrl(url);
-		setVideoTitle(title);
+		setShowVideo(true); // Display the video player
+		setVideoUrl(url); // Set the URL of the video to be displayed
+		setVideoTitle(title); // Set the title of the video to be displayed
 	};
 
+	// Event handler for when the video player is closed
 	const handleVideoClose = () => {
-		setShowVideo(false);
-		setVideoUrl("");
-		setVideoTitle("");
+		setShowVideo(false); // Hide the video player
+		setVideoUrl(""); // Clear the URL of the video
+		setVideoTitle(""); // Clear the title of the video
 	};
 
 	return (
 		<>
+			{/* Navigation bar component */}
 			<NavigationBarFinal />
+
+			{/* Header section */}
 			<section className="header">
 				<h1>On Demand Workouts</h1>
 				<p>
@@ -53,9 +66,12 @@ const OnDemandPage = () => {
 					anywhere!
 				</p>
 			</section>
+
+			{/* Category section */}
 			<section className="category">
 				<h2>Recent Workouts</h2>
 				<div className="card-grid">
+					{/* Card component */}
 					<Card style={{ width: "100%" }}>
 						<Card.Img
 							variant="top"
@@ -67,11 +83,15 @@ const OnDemandPage = () => {
 							<Card.Subtitle className="mb-2">
 								Tone, Define and Strengthen Your Back
 							</Card.Subtitle>
+
+							{/* Button component */}
 							<Button
 								variant="primary"
 								onClick={() => {
-									authCheck();
+									// When the button is clicked
+									authCheck(); // Check if the user is authenticated
 									handleViewClick(
+										// Display the video player
 										"Ultimate Back Workout",
 										"https://youtu.be/iGVZszacXkk"
 									);
@@ -157,21 +177,25 @@ const OnDemandPage = () => {
 				</div>
 			</section>
 			{showVideo && (
+				// If the showVideo state is true, show the video modal
 				<div className="video-modal">
 					<div className="video-player">
-						<h2>{videoTitle}</h2>
+						<h2>{videoTitle}</h2> {/* Display the title of the video */}
 						<ReactPlayer
-							url={videoUrl}
-							controls={true}
+							url={videoUrl} // Set the URL of the video to be displayed
+							controls={true} // Display the video controls
 							width="100%"
 							height="100vh"
 						/>
 						<Button variant="danger" onClick={handleVideoClose}>
-							Close
+							{" "}
+							{/* Close the video player Close */}
 						</Button>
 					</div>
 				</div>
 			)}
+			{/* Add more categories if needed */}
+			
 			{/* <section className="category">
 				<h2>Full Body</h2>
 				
