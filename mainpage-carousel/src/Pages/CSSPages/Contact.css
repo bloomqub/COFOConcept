@@ -37,14 +37,22 @@ label {
   
   /* Style the submit button */
   button[type="submit"] {
-    background-color: #007bff;
+    background-color: #FFA500;
     color: #fff;
     border: none;
     border-radius: 4px;
     padding: 10px 20px;
     cursor: pointer;
   }
-  
+
+  button[type="submit"]:hover {
+    background-color: #d88d02;
+  }
+
+  button[type="submit"]:focus {
+    background-color: #FFA500;
+  }
+
   /* Disable the submit button when the captcha is not completed */
   button[type="submit"]:disabled {
     background-color: #ccc;

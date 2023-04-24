@@ -1,5 +1,3 @@
-
-
 a:hover {
     text-decoration: none;
 }
@@ -25,6 +23,7 @@ a:hover {
     justify-content: center;
     line-height: 1;
     color: #fff;
+    filter: saturate(90%);
   }
   .social-icon a::before {
     content: "";

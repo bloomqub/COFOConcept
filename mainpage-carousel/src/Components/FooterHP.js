@@ -2,14 +2,13 @@ import React from "react";
 import facebook from "../cofo-img/facebook.svg";
 import youtube from "../cofo-img/youtube.svg";
 import instagram from "../cofo-img/instagram.svg";
-import LOGO from "../cofo-img/CoFoLogo.png";
 import "./CSSCOMPONENTS/Footer.css"
 
 
-export default function Footer() {
+export default function FooterHP() {
 	return (
 		<footer className="text-center text-black" style={{
-			background: "linear-gradient(#FFA500, #fff)",
+			backgroundColor: "#000"
 		}}>
 			<div className="p-4 pb-0">
 				<section className="mb-4">
