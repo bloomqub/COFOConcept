@@ -2,7 +2,6 @@ import React from "react";
 import facebook from "../cofo-img/facebook.svg";
 import youtube from "../cofo-img/youtube.svg";
 import instagram from "../cofo-img/instagram.svg";
-import LOGO from "../cofo-img/CoFoLogo.png";
 import "./CSSCOMPONENTS/Footer.css"
 
 

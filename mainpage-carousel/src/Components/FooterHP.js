@@ -2,19 +2,19 @@ import React from "react";
 import facebook from "../cofo-img/facebook.svg";
 import youtube from "../cofo-img/youtube.svg";
 import instagram from "../cofo-img/instagram.svg";
-import "./CSSCOMPONENTS/Footer.css"
+import "./CSSCOMPONENTS/FooterHP.css"
 
 
 export default function FooterHP() {
 	return (
-		<footer className="text-center text-black" style={{
+		<footer className="text-center text-white" style={{
 			backgroundColor: "#000"
 		}}>
 			<div className="p-4 pb-0">
 				<section className="mb-4">
 					<span className="inline-images">
 						
-						<div className="social-icon">
+						<div className="social-icons">
 							<a
 								href="https://www.facebook.com/profile.php?id=8318387"
 							>

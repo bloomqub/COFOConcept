@@ -1,6 +1,5 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
-import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
@@ -52,7 +51,7 @@ const NavigationBar = () => {
 					<Navbar.Collapse id="responsive-navbar-nav">
 						{" "}
 						{/* Navbar Collapse for reponsive navigation for mobile phones*/}
-						<Nav className="mx-auto">
+						<Nav className="nav-bar-links">
 							{" "}
 							{/* Nav component for navigation */}
 							<Nav.Link href="/OnDemand">On Demand</Nav.Link>

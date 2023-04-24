@@ -3,6 +3,7 @@ import Slider from "../Components/Slider"
 import About from "../Components/About"
 import Footer from "../Components/Footer"
 import NavigationBarFinal from "../Components/NavigationBarFinal"
+import FooterHP from "../Components/FooterHP"
 
 
 export default function Coverpage() {
@@ -11,7 +12,7 @@ export default function Coverpage() {
         <NavigationBarFinal />
         <Slider></Slider>
         <About></About>
-        <Footer></Footer>
+        <FooterHP />
         </>
     );
 }
