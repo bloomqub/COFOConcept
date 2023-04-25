@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 import "./CSSCOMPONENTS/About.css";
 import Picture from "../Images/MGJ_6825.JPG.jpg";
+import TrackVisibility from "react-on-screen";
+
 
 export default class About extends Component {
 	render() {
@@ -21,11 +23,11 @@ export default class About extends Component {
 						variety of people, and constantly adapting my program to the needs
 						of my new clients.
 					</p>
-					<div className="button-container">
-						<a href="/contact">
-						<Button variant="outline-dark">Contact me</Button>
-						</a>
-					</div>
+							<div className="button-container">
+								<a href="/contact">
+								<Button variant="outline-dark">Contact me</Button>
+								</a>
+							</div>
 				</div>
 			</div>
 		);

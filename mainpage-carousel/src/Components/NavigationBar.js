@@ -4,8 +4,9 @@ import Navbar from "react-bootstrap/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // importing a FontAwesomeIcon component
-import { faUser } from "@fortawesome/free-solid-svg-icons"; // importing a FontAwesomeIcon
 import ".//CSSCOMPONENTS/NavigationBar.css";
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons"; // importing a FontAwesomeIcon
+
 
 const NavigationBar = () => {
 	return (
@@ -62,7 +63,7 @@ const NavigationBar = () => {
 							<Nav.Link eventKey={2} href="/login">
 								{" "}
 								{/* eventKey is used to identify the component */}
-								<FontAwesomeIcon icon={faUser} />
+								<FontAwesomeIcon icon={faUserCircle} size="lg" />
 								{" Login"}
 								{/* FontAwesomeIcon component for icons(User icon) */}
 							</Nav.Link>

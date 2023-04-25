@@ -7,7 +7,7 @@
     border-color: #FFA500;
 
 }
-.back-btn:active {
+.back-btn:active:hover {
     background-color: #FFA500;
     border-color: #FFA500;
 }

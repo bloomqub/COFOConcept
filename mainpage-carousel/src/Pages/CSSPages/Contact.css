@@ -49,10 +49,9 @@ label {
     background-color: #d88d02;
   }
 
-  button[type="submit"]:focus {
+  button[type="submit"]:active:hover {
     background-color: #FFA500;
   }
-
   /* Disable the submit button when the captcha is not completed */
   button[type="submit"]:disabled {
     background-color: #ccc;
