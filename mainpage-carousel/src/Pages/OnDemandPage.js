@@ -174,6 +174,22 @@ const OnDemandPage = () => {
 						</Card.Body>
 					</Card>
 					{/* add more cards here... If needed */}
+					{/* <section className="category">
+				<h2>Full Body</h2>
+				
+			</section>
+			<section className="category">
+				<h2>Upper Body</h2>
+
+			</section>
+			<section className="category">
+				<h2>Lower Body</h2>
+
+			</section>
+			<section className="category">
+				<h2>Core</h2>
+				
+			</section> */}
 				</div>
 			</section>
 			{showVideo && (
@@ -194,7 +210,6 @@ const OnDemandPage = () => {
 					</div>
 				</div>
 			)}
-			{/* Add more categories if needed */}
 
 			{/* <section className="category">
 				<h2>Full Body</h2>
