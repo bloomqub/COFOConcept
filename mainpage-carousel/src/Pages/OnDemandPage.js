@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Filter from "../Components/Filter"
 import NavigationBarFinal from "../Components/NavigationBarFinal"; // Importing NavigationBarFinal component from the Components folder
 import "./CSSPages/OnDemandPage.css"; // Importing OnDemandPage.css file for styling
 import Footer from "../Components/Footer"; // Importing Footer component from the Components folder
@@ -66,7 +67,7 @@ const OnDemandPage = () => {
 					anywhere!
 				</p>
 			</section>
-
+			<Filter/>
 			{/* Category section */}
 			<section className="category">
 				<h2>Recent Workouts</h2>
