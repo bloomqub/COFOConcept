@@ -195,7 +195,7 @@ const OnDemandPage = () => {
 				</div>
 			)}
 			{/* Add more categories if needed */}
-			
+
 			{/* <section className="category">
 				<h2>Full Body</h2>
 				
@@ -223,6 +223,26 @@ const OnDemandPage = () => {
 						name="hosted_button_id"
 						value="HV77LMWL2NZ6U"
 					></input>
+					<table>
+						<tr>
+							<td>
+								<input type="hidden" name="on0" value="Workout Video"></input>
+								Workout Video
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<select name="os0">
+									<option value="Ultimate Back Workout">
+										Ultimate Back Workout{" "}
+									</option>
+									<option value="Stronger Together">Stronger Together </option>
+									<option value="Ultimate Burnout">Ultimate Burnout </option>
+									<option value="Tricep Toning">Tricep Toning </option>
+								</select>{" "}
+							</td>
+						</tr>
+					</table>
 					<input
 						type="image"
 						src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
