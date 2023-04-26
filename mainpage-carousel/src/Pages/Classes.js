@@ -19,7 +19,6 @@ const Classes = () => {
 								<h4 className="card-title text-center">Single Class</h4>
 								<p className="card-text text-center">A La Carte</p>
 								<h5 className="card-text text-center">$10</h5>
-								{/* Add a photo here? */}
 							</div>
 						</div>
 
@@ -36,6 +35,15 @@ const Classes = () => {
 								<h4 className="card-title text-center">10 Class Package</h4>
 								<p className="card-text text-center">Expires after 30 days</p>
 								<h5 className="card-text text-center">$60</h5>
+							</div>
+						</div>
+
+						<div className="card mb-4">
+							<div className="card-body">
+								<h4 className="card-title text-center">30 Day All-Access Pass</h4>
+								<p className="card-text text-center">30 days of unlimited access to classes</p>
+								<h5 className="card-text text-center">$75</h5>
+								{/* Add a photo here? */}
 							</div>
 						</div>
 
