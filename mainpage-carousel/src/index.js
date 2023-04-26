@@ -31,7 +31,6 @@ root.render(
         <Route path="/classes" Component={Classes} />
         <Route path="/signup" element={<PrivateRouteLS> <Signup /> </PrivateRouteLS>}/>
         <Route path="/login" element={<PrivateRouteLS> <Login /> </PrivateRouteLS>}/>
-        <Route path="/Shop" Component={Shop} />
         <Route path="/profile" element={<PrivateRoute> <Profile/> </PrivateRoute>} />
         <Route path="/forgot-password" Component={ForgotPassword} />
         <Route path="/update-profile" Component={UpdateProfile}/>

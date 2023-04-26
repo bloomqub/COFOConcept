@@ -7,5 +7,5 @@ export default function PrivateRouteLS({ children }) {
 
   const { currentUser } = useAuth()
 
-  return !currentUser ? children: <Navigate to="/"/>
+  return !currentUser ? children: <Navigate to="/profile"/>
 }
