@@ -14,9 +14,13 @@
     "bootstrap": "^5.2.3",
     "cdbreact": "^1.5.9",
     "dotenv": "^16.0.3",
+<<<<<<< Updated upstream
     "emailjs-com": "^3.2.0",
     "enoent": "^1.0.0",
     "firebase": "^9.19.1",
+=======
+    "firebase": "^9.20.0",
+>>>>>>> Stashed changes
     "font-awesome": "^4.7.0",
     "mdb-react-ui-kit": "^5.1.0",
     "ng2-google-recaptcha": "^5.0.0",

@@ -1,7 +1,8 @@
 //import { onAuthStateChanged } from 'firebase/auth'
 import React, { useContext, useState, useEffect } from 'react'
 import { auth } from '../contexts/firebase'
-import { getAuth, sendPasswordResetEmail, sendSignInLinkToEmail } from "firebase/auth";
+import { getAuth, sendPasswordResetEmail, sendSignInLinkToEmail, sendEmailVerification } from "firebase/auth";
+import { getDatabase, set, ref, push } from 'firebase/database';
 
 const AuthContext = React.createContext()
 
@@ -17,6 +18,11 @@ export function AuthProvider({ children }) {
 
     // cretes a user instance when signup occurs
     function signup(email, password) {
+       // sendEmailVerification(auth.currentUser)
+         //   .then(() => {
+           //     alert("Email verification sent!")
+            //})
+
         return auth.createUserWithEmailAndPassword(email, password) 
     }
 
@@ -39,6 +45,20 @@ export function AuthProvider({ children }) {
     function updatePassword(password) {
         return currentUser.updatePassword(password)
     }
+
+    function emailConfirmation() {
+        return auth.currentUser.sendEmailVerification()
+    }
+
+    function addUser(email) {
+        const db = getDatabase()
+        const reference = ref(db, 'users/')
+        
+        push(reference, {
+            email: email
+        })
+    }
+
     useEffect(() => {
         //allows us to set the user
         const unsubscribe = auth.onAuthStateChanged(user => {
@@ -55,7 +75,9 @@ export function AuthProvider({ children }) {
         logout,
         resetPassword,
         updateEmail,
-        updatePassword
+        updatePassword,
+        emailConfirmation,
+        addUser
     }  
 
     return (

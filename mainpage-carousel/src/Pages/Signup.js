@@ -2,18 +2,27 @@ import React, { useRef, useState } from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useNavigate } from 'react-router-dom'
+<<<<<<< Updated upstream
 import "./CSSPages/Signup.css";
 import logo from "../cofo-img/CoFoLogo.png";
+=======
+import { sendEmailVerification } from 'firebase/auth'
+import { getDatabase, set, ref } from 'firebase/database';
+import { auth } from '../firebase'
+>>>>>>> Stashed changes
 
 export default function Signup() {
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
     const { signup } = useAuth()
+    const { addUser } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
+ 
 
+ 
     // checks to see if passwords match when signing up throws error if they do not
     async function handleSubmit(e) {
         e.preventDefault()
@@ -26,6 +35,7 @@ export default function Signup() {
             setError('')
             setLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value)
+            // emailVerification(emailRef.current.value)
             navigate("/")
         } catch {
             setError('Failed to create an account')
@@ -35,6 +45,7 @@ export default function Signup() {
     function handleGoBack() {
         navigate("/");
     }
+
 
   return (
     <>

@@ -72,7 +72,11 @@ function Contact() {
 			<div className="container mt-5 mb-5">
 				<div className="row justify-content-center">
 					<div className="col-md-6">
+<<<<<<< Updated upstream
 						<Form onSubmit={sendEmail}>
+=======
+						<Form controlId= "Contact">
+>>>>>>> Stashed changes
 							<h1 className="text-center mb-4">Contact me</h1>
 							<Form.Group controlId="formBasicName">
 								<Form.Label>Name</Form.Label>
