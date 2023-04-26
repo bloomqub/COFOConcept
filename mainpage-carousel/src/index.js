@@ -16,6 +16,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import Shop from "./Pages/Shop";
 import UpdateProfile from "./Pages/UpdateProfile";
 import PrivateRoute from "./Components/PrivateRoute";
+import PrivateRouteLS from "./Components/PrivateRouteLS";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -28,8 +29,8 @@ root.render(
         <Route path="/OnDemand" Component={OnDemand} />
         <Route path="/contact" Component={Contact} />
         <Route path="/classes" Component={Classes} />
-        <Route path="/signup" Component={Signup} />
-        <Route path="/login" Component={Login} />
+        <Route path="/signup" element={<PrivateRouteLS> <Signup /> </PrivateRouteLS>}/>
+        <Route path="/login" element={<PrivateRouteLS> <Login /> </PrivateRouteLS>}/>
         <Route path="/Shop" Component={Shop} />
         <Route path="/profile" element={<PrivateRoute> <Profile/> </PrivateRoute>} />
         <Route path="/forgot-password" Component={ForgotPassword} />
