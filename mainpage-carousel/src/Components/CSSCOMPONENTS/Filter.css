@@ -3,3 +3,16 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
   }
+  
+  #filter {
+    width: 25%;
+    font-size: 16px;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .custom {
+    width: min-content;
+
+  }
+  

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import Filter from "../Components/CSSCOMPONENTS/Filter.css"
+import "../Components/CSSCOMPONENTS/Filter.css"
 
 // Array of objects containing video data
 const data = [
@@ -61,7 +61,7 @@ const FilterButton = () => {
       {/* Display the filtered data as a list of cards */}
       <div className="card-grid" ref={scrollRef}>
         {filteredData.map(item => (
-          <Card key={item.id} style={{ width: "100%" }} data-title={item.title} data-url={item.videoUrl}>
+          <Card className="custom" key={item.id} style={{ width: "100%" }} data-title={item.title} data-url={item.videoUrl}>
             <Card.Body>
               <Card.Title>{item.title}</Card.Title>
               <Card.Subtitle className="mb-2">{item.subtitle}</Card.Subtitle>
