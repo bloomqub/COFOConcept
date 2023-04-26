@@ -45,7 +45,7 @@ const FilterButton = () => {
   const handleViewClick = (title, videoUrl) => {
     const card = scrollRef.current.querySelector(`[data-title="${title}"][data-url="${videoUrl}"]`);
     if (card) {
-      card.scrollIntoView({ behavior: 'smooth' });
+      card.scrollIntoView({ behavior: "auto", block:"start"});
     }
   };
 
@@ -61,7 +61,7 @@ const FilterButton = () => {
       {/* Display the filtered data as a list of cards */}
       <div className="card-grid" ref={scrollRef}>
         {filteredData.map(item => (
-          <Card className="custom" key={item.id} style={{ width: "100%" }} data-title={item.title} data-url={item.videoUrl}>
+          <Card className="custom" key={item.id} style={{ width: "100%" }} data-title={item.title} data-url={item.videoUrl} >
             <Card.Body>
               <Card.Title>{item.title}</Card.Title>
               <Card.Subtitle className="mb-2">{item.subtitle}</Card.Subtitle>
