@@ -33,7 +33,8 @@ const OnDemandPage = () => {
 	// Function that checks if the user is authenticated and redirects to the appropriate page
 	function authCheck() {
 		if (user) {
-			window.location.href ="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV77LMWL2NZ6U";
+			window.location.href =
+				"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV77LMWL2NZ6U";
 		} else {
 			window.location.href = "/signup";
 		}
@@ -47,12 +48,12 @@ const OnDemandPage = () => {
 		setVideoUrl(url); // Set the URL of the video to be displayed
 		setVideoTitle(title); // Set the title of the video to be displayed
 	};
+
 	useEffect(() => {
 		if (loading) {
 			setShowVideo(false); // Hide the video modal
 		}
-	}, [loading])
-
+	}, [loading]);
 
 	// Event handler for when the video player is closed
 	const handleVideoClose = () => {
