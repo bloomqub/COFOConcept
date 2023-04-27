@@ -2,14 +2,10 @@ import React, { useRef, useState } from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useNavigate } from 'react-router-dom'
-<<<<<<< Updated upstream
-import "./CSSPages/Signup.css";
-import logo from "../cofo-img/CoFoLogo.png";
-=======
 import { sendEmailVerification } from 'firebase/auth'
 import { getDatabase, set, ref } from 'firebase/database';
 import { auth } from '../firebase'
->>>>>>> Stashed changes
+import logo from "../cofo-img/CoFoLogo.png";
 
 export default function Signup() {
     const firstNameRef = useRef()
@@ -34,12 +30,8 @@ export default function Signup() {
         try{
             setError('')
             setLoading(true)
-<<<<<<< Updated upstream
-            await signup(emailRef.current.value, passwordRef.current.value)
-=======
             await signup(emailRef.current.value, passwordRef.current.value, firstNameRef.current.value, lastNameRef.current.value, numberRef.current.value)
             // emailVerification(emailRef.current.value)
->>>>>>> Stashed changes
             navigate("/")
         } catch {
             setError('Failed to create an account')
@@ -49,10 +41,7 @@ export default function Signup() {
     function handleGoBack() {
         navigate("/");
     }
-<<<<<<< Updated upstream
-=======
 // remember to put back in under first card.body 
->>>>>>> Stashed changes
 
   return (
     <>
