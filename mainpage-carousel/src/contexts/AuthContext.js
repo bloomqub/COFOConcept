@@ -1,7 +1,13 @@
 //import { onAuthStateChanged } from 'firebase/auth'
 import React, { useContext, useState, useEffect } from 'react'
+<<<<<<< Updated upstream
 import { auth } from '../contexts/firebase'
 import { getAuth, sendPasswordResetEmail, sendSignInLinkToEmail } from "firebase/auth";
+=======
+import { auth } from '../firebase'
+import { getAuth, sendPasswordResetEmail, sendSignInLinkToEmail, sendEmailVerification } from "firebase/auth";
+import { getDatabase, set, ref, push } from 'firebase/database';
+>>>>>>> Stashed changes
 
 const AuthContext = React.createContext()
 
@@ -16,8 +22,25 @@ export function AuthProvider({ children }) {
     const [loading, setLoading] = useState(true)  //verification to see if there is already user
 
     // cretes a user instance when signup occurs
+<<<<<<< Updated upstream
     function signup(email, password) {
         return auth.createUserWithEmailAndPassword(email, password) 
+=======
+    function signup(email, password, firstName, lastName, number) {
+       // sendEmailVerification(auth.currentUser)
+         //   .then(() => {
+           //     alert("Email verification sent!")
+            //})
+            const db = getDatabase()
+            push(ref(db, 'users/' ), {
+                email: email,
+                name: firstName && lastName,
+                number: number
+
+            })
+
+        return auth.createUserWithEmailAndPassword(email, password, firstName, lastName, number) 
+>>>>>>> Stashed changes
     }
 
     function login(email, password) {
@@ -39,6 +62,23 @@ export function AuthProvider({ children }) {
     function updatePassword(password) {
         return currentUser.updatePassword(password)
     }
+<<<<<<< Updated upstream
+=======
+
+    function emailConfirmation() {
+        return auth.currentUser.sendEmailVerification()
+    }
+
+    function addUser(email) {
+        const db = getDatabase()
+        //const reference = ref(db, 'users/')
+        
+        push(ref(db, 'users/' ), {
+            email: email
+        })
+    }
+
+>>>>>>> Stashed changes
     useEffect(() => {
         //allows us to set the user
         const unsubscribe = auth.onAuthStateChanged(user => {

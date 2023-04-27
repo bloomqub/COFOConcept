@@ -5418,9 +5418,15 @@ find-up@^5.0.0:
     path-exists "^4.0.0"
 
 firebase@^9.19.1:
+<<<<<<< Updated upstream
   version "9.19.1"
   resolved "https://registry.npmjs.org/firebase/-/firebase-9.19.1.tgz"
   integrity sha512-MeukV4NIk6usV1ZbnoA36gumK62JzxOZmF6OZyqkFwJ7edpAEyYNZXvExQlFsvnx2ery0UwNIvu4pKIZS3HiEQ==
+=======
+  version "9.20.0"
+  resolved "https://registry.npmjs.org/firebase/-/firebase-9.20.0.tgz"
+  integrity sha512-qkSfdotdgZuMNCi4ddMLT+Pr18m021SkzImgplpihZOSx0utWdO39TgHivMfurlgp0fp4eQ2U4YEDPfP+Iq4bw==
+>>>>>>> Stashed changes
   dependencies:
     "@firebase/analytics" "0.9.5"
     "@firebase/analytics-compat" "0.2.5"

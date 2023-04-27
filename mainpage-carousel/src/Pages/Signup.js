@@ -2,10 +2,19 @@ import React, { useRef, useState } from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useNavigate } from 'react-router-dom'
+<<<<<<< Updated upstream
 import "./CSSPages/Signup.css";
 import logo from "../cofo-img/CoFoLogo.png";
+=======
+import { sendEmailVerification } from 'firebase/auth'
+import { getDatabase, set, ref } from 'firebase/database';
+import { auth } from '../firebase'
+>>>>>>> Stashed changes
 
 export default function Signup() {
+    const firstNameRef = useRef()
+    const lastNameRef = useRef()
+    const numberRef = useRef()
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
@@ -25,7 +34,12 @@ export default function Signup() {
         try{
             setError('')
             setLoading(true)
+<<<<<<< Updated upstream
             await signup(emailRef.current.value, passwordRef.current.value)
+=======
+            await signup(emailRef.current.value, passwordRef.current.value, firstNameRef.current.value, lastNameRef.current.value, numberRef.current.value)
+            // emailVerification(emailRef.current.value)
+>>>>>>> Stashed changes
             navigate("/")
         } catch {
             setError('Failed to create an account')
@@ -35,6 +49,10 @@ export default function Signup() {
     function handleGoBack() {
         navigate("/");
     }
+<<<<<<< Updated upstream
+=======
+// remember to put back in under first card.body 
+>>>>>>> Stashed changes
 
   return (
     <>
@@ -45,6 +63,18 @@ export default function Signup() {
                 <h2 className='text-center mb-4'>Sign Up</h2>
                 {error && <Alert variant='danger'>{error}</Alert> }
                 <Form onSubmit={handleSubmit}>
+                    <Form.Group id ="first-name">
+                        <Form.Label>First Name</Form.Label>
+                        <Form.Control type="name" ref={firstNameRef} required />
+                    </Form.Group>
+                    <Form.Group id ="last-name">
+                        <Form.Label>Last Name</Form.Label>
+                        <Form.Control type="name" ref={lastNameRef} required />
+                    </Form.Group>
+                    <Form.Group id ="number">
+                        <Form.Label>Phone number</Form.Label>
+                        <Form.Control type="number" placeholder= "(XXX)XXX-XXXX" ref={numberRef} required />
+                    </Form.Group>
                     <Form.Group id ="email">
                         <Form.Label>Email</Form.Label>
                         <Form.Control type="email" ref={emailRef} required />
@@ -57,7 +87,7 @@ export default function Signup() {
                         <Form.Label>Password Confirmation</Form.Label>
                         <Form.Control type="password" ref={passwordConfirmRef} required />
                     </Form.Group>
-                    <Button disabled = {loading} className="w-100 mt-2" type="submit">Sign Up</Button>
+                    <Button disabled = {loading} className="w-100 mt-2" type="submit" >Sign Up</Button>
                 </Form>  
             </Card.Body>
         </Card>
