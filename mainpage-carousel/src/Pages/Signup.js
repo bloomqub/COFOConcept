@@ -5,7 +5,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { sendEmailVerification } from 'firebase/auth'
 import { getDatabase, set, ref } from 'firebase/database';
 import { auth } from '../firebase'
-import logo from "../cofo-img/CoFoLogo.png";
+import logo from "../Images/TheCoFoConcept2.png";
+import "../Pages/CSSPages/Signup.css"
 
 export default function Signup() {
     const firstNameRef = useRef()
@@ -48,7 +49,9 @@ export default function Signup() {
         <Button className="back-btn" onClick={handleGoBack}>Back</Button>
         <Card className="wholecard">
             <Card.Body>
-                <img href={logo} />
+                <div className='logo-container'>
+                <img src={logo} alt="Logo" style={{ width: "200px", marginBottom: "2rem" }} />
+            </div>
                 <h2 className='text-center mb-4'>Sign Up</h2>
                 {error && <Alert variant='danger'>{error}</Alert> }
                 <Form onSubmit={handleSubmit}>
