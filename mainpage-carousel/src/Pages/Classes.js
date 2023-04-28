@@ -1,6 +1,7 @@
 import React from "react";
 import NavigationBarFinal from "../Components/NavigationBarFinal";
 import Footer from "../Components/Footer";
+import Photo1 from "../Images/gym pic 7.JPG"; // Importing image file from the Images folder
 
 const Classes = () => {
 	return (
@@ -43,15 +44,17 @@ const Classes = () => {
 								<h4 className="card-title text-center">30 Day All-Access Pass</h4>
 								<p className="card-text text-center">30 days of unlimited access to classes and videos</p>
 								<h5 className="card-text text-center">$75</h5>
-								{/* Add a photo here? */}
 							</div>
+						</div>
+
+						<div>
+							<img src = "Photo1" alt = "Kettle workout"></img>
 						</div>
 
 						<div className="card mb-4">
 							<div className="card-body">
 								<h3 className="card-title text-center">Challenges</h3>
 								<p className="card-text text-center">Coming Soon</p>
-								{/* Add a photo */}
 							</div>
 						</div>
 
