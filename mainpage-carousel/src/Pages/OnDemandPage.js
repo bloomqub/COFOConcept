@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Filter from "../Components/Filter"
+import React, { useEffect, useState } from "react";
+import Filter from "../Components/Filter";
 import NavigationBarFinal from "../Components/NavigationBarFinal"; // Importing NavigationBarFinal component from the Components folder
 import "./CSSPages/OnDemandPage.css"; // Importing OnDemandPage.css file for styling
 import Footer from "../Components/Footer"; // Importing Footer component from the Components folder
@@ -14,21 +14,21 @@ import Profile3 from "../Images/gym pic 5.JPG"; // Importing image file from the
 import Profile4 from "../Images/gym pic 6.JPG"; // Importing image file from the Images folder
 import Profile5 from "../Images/weight pic.JPG"; // Importing image file from the Images folder
 import Profile6 from "../Images/Community.png"; // Importing image file from the Images folder
+import PayPal from "../Components/Paypal"; // Importing PayPal component from the Components folder
 
 const OnDemandPage = () => {
 	// Declaring state variables using the useState hook
 	const [showVideo, setShowVideo] = useState(false); // showVideo state variable controls whether or not the video player is displayed
 	const [videoUrl, setVideoUrl] = useState(""); // videoUrl state variable stores the URL of the video to be displayed
 	const [videoTitle, setVideoTitle] = useState(""); // videoTitle state variable stores the title of the video to be displayed
+	const [Checkout, setCheckout] = useState(false); // Checkout state variable controls whether or not the checkout page is displayed
+	const [loading, setLoading] = useState(false); // loading state variable controls whether or not the loading page is displayed
 
 	// Initializing Firebase authentication
 	const auth = getAuth();
 
 	// Retrieving the currently logged in user
 	const user = auth.currentUser;
-
-	// Initializing the useNavigate hook to navigate to different pages
-	const navigate = useNavigate();
 
 	// Function that checks if the user is authenticated and redirects to the appropriate page
 	function authCheck() {
@@ -42,10 +42,18 @@ const OnDemandPage = () => {
 
 	// Event handler for when the button "view workout" is clicked
 	const handleViewClick = (title, url) => {
+		authCheck(); // Check if the user is authenticated
+		setLoading(true); // Display the loading page
 		setShowVideo(true); // Display the video player
 		setVideoUrl(url); // Set the URL of the video to be displayed
 		setVideoTitle(title); // Set the title of the video to be displayed
 	};
+
+	useEffect(() => {
+		if (loading) {
+			setShowVideo(false); // Hide the video modal
+		}
+	}, [loading]);
 
 	// Event handler for when the video player is closed
 	const handleVideoClose = () => {
@@ -67,7 +75,7 @@ const OnDemandPage = () => {
 					anywhere!
 				</p>
 			</section>
-			<Filter/>
+			<Filter />
 			{/* Category section */}
 			<section className="category">
 				<h2>Recent Workouts</h2>
@@ -90,7 +98,6 @@ const OnDemandPage = () => {
 								variant="primary"
 								onClick={() => {
 									// When the button is clicked
-									authCheck(); // Check if the user is authenticated
 									handleViewClick(
 										// Display the video player
 										"Ultimate Back Workout",
@@ -205,7 +212,7 @@ const OnDemandPage = () => {
 							height="100vh"
 						/>
 						<Button variant="danger" onClick={handleVideoClose}>
-							{" "}
+							{"Close"}
 							{/* Close the video player Close */}
 						</Button>
 					</div>
@@ -228,7 +235,19 @@ const OnDemandPage = () => {
 			<section className="subscribe">
 				<h2>Subscribe Today</h2>
 				<p>Don't miss out on our latest on-demand workout videos!</p>
-				<form
+				{Checkout ? (
+					<PayPal />
+				) : (
+					<Button
+						variant="warning"
+						onClick={() => {
+							setCheckout(true);
+						}}
+					>
+						Checkout
+					</Button>
+				)}
+				{/* <form
 					action="https://www.paypal.com/cgi-bin/webscr"
 					method="post"
 					target="_top"
@@ -273,7 +292,7 @@ const OnDemandPage = () => {
 						width="1"
 						height="1"
 					></img>
-				</form>
+				</form> */}
 			</section>
 			<Footer />
 		</>

@@ -18,3 +18,14 @@
     background-color: #d88d02;
     border-color: #d88d02;
 }
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .logo {
+    max-width: 200px;
+  }
+  
