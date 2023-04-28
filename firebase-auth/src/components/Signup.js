@@ -1,9 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
-import { Link, useNavigate } from 'react-router-dom'
-import "./CSSPages/Signup.css";
-import logo from "../cofo-img/CoFoLogo.png";
+import { Link, useHistory, useNavigate } from 'react-router-dom'
 
 export default function Signup() {
     const emailRef = useRef()
@@ -32,18 +30,11 @@ export default function Signup() {
         }
         setLoading(false)
     }
-    function handleGoBack() {
-        navigate("/");
-    }
 
   return (
     <>
-        <Button className="back-btn" onClick={handleGoBack}>Back</Button>
-        <Card className="wholecard">
+        <Card>
             <Card.Body>
-                <div className='logo-container'>
-                <img src={logo} alt="Logo" style={{ width: "200px", marginBottom: "2rem" }} />
-            </div>
                 <h2 className='text-center mb-4'>Sign Up</h2>
                 {error && <Alert variant='danger'>{error}</Alert> }
                 <Form onSubmit={handleSubmit}>

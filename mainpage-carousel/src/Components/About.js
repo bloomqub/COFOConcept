@@ -2,16 +2,21 @@ import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 import "./CSSCOMPONENTS/About.css";
 import Picture from "../Images/MGJ_6825.JPG.jpg";
-import TrackVisibility from "react-on-screen";
+import "animate.css";
+import TrackVisibility from 'react-on-screen';
 
 
 export default class About extends Component {
 	render() {
 		return (
 			<div className="about-container">
-				<div className="picture-container">
+				<TrackVisibility>
+				<div className={""}>				
+					<div className="picture-container">
 					<img src={Picture} alt="about-me-Image" />
+					</div>
 				</div>
+				</TrackVisibility>
 				<div className="text-container">
 					<h1>About Me</h1>
 					<p>
