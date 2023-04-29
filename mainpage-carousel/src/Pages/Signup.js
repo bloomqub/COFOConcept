@@ -57,11 +57,11 @@ export default function Signup() {
                 <Form onSubmit={handleSubmit}>
                     <Form.Group id ="first-name">
                         <Form.Label>First Name</Form.Label>
-                        <Form.Control type="name" ref={firstNameRef} required />
+                        <Form.Control type="name" placeholder= "Johnny" ref={firstNameRef} required />
                     </Form.Group>
                     <Form.Group id ="last-name">
                         <Form.Label>Last Name</Form.Label>
-                        <Form.Control type="name" ref={lastNameRef} required />
+                        <Form.Control type="name" placeholder= "Appleseed" ref={lastNameRef} required />
                     </Form.Group>
                     <Form.Group id ="number">
                         <Form.Label>Phone number</Form.Label>
@@ -69,7 +69,7 @@ export default function Signup() {
                     </Form.Group>
                     <Form.Group id ="email">
                         <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" ref={emailRef} required />
+                        <Form.Control type="email" placeholder= "johnnyappleseed@gmail.com" ref={emailRef} required />
                     </Form.Group>
                     <Form.Group id ="password">
                         <Form.Label>Password</Form.Label>
@@ -79,7 +79,7 @@ export default function Signup() {
                         <Form.Label>Password Confirmation</Form.Label>
                         <Form.Control type="password" ref={passwordConfirmRef} required />
                     </Form.Group>
-                    <Button disabled = {loading} className="w-100 mt-2" type="submit" >Sign Up</Button>
+                    <Button disabled = {loading} className="w-100 mt-2" type="submit">Sign Up</Button>
                 </Form>  
             </Card.Body>
         </Card>

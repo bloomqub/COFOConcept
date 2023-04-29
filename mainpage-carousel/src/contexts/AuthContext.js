@@ -1,10 +1,16 @@
 //import { onAuthStateChanged } from 'firebase/auth'
 import React, { useContext, useState, useEffect } from 'react'
 import { auth } from '../firebase'
-import { getAuth, sendPasswordResetEmail, sendSignInLinkToEmail, sendEmailVerification } from "firebase/auth";
+import { getAuth, sendPasswordResetEmail, sendSignInLinkToEmail, sendEmailVerification, getIdToken } from "firebase/auth";
 import { getDatabase, set, ref, push } from 'firebase/database';
+import emailjs from "emailjs-com";
 
 const AuthContext = React.createContext()
+//const uid = auth.currentUser.uid
+// email service and template IDs for sending email
+const serviceId = "service_88f6uzo";
+const templateId = "template_8c5ns17";
+const userId = "cbHVCN5PjSJiOARoO";
 
 // allows us to use auth context function
 export function useAuth(){
@@ -15,7 +21,8 @@ export function useAuth(){
 export function AuthProvider({ children }) {
     const [currentUser, setCurrentUser] = useState()
     const [loading, setLoading] = useState(true)  //verification to see if there is already user
-
+    const [signedIn, setSignedIn] = useState(false) 
+    
     // cretes a user instance when signup occurs
 
     function signup(email, password, firstName, lastName, number) {
@@ -28,9 +35,19 @@ export function AuthProvider({ children }) {
                 email: email,
                 firstName: firstName,
                 lastName: lastName,
-                number: number
-
+                number: number,
+                //uid: uid
+                
             })
+
+            emailjs
+				.send(serviceId, templateId, userId)
+				.then(function (response) {
+					console.log("SUCCESS!", response.status, response.text)
+				})
+				.catch(function (error) { // if email fails to send
+					console.log("FAILED...", error);
+				});
 
         return auth.createUserWithEmailAndPassword(email, password, firstName, lastName, number) 
     }
