@@ -11,8 +11,7 @@ const app = firebase.initializeApp({
     storageBucket: process.env.REACT_APP_FIREBASE__STORAGE_BUCKET,
     messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
     appId: process.env.REACT_APP_FIREBASE_APP_ID,
-    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
-    databaseURL: "https://cofo-580d1-default-rtdb.firebaseio.com/"
+    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 })
 
 //Initialize firebase
