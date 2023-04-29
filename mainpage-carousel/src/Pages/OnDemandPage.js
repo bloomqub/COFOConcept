@@ -16,6 +16,7 @@ import Profile5 from "../Images/weight pic.JPG"; // Importing image file from th
 import Profile6 from "../Images/Community.png"; // Importing image file from the Images folder
 import PayPal from "../Components/Paypal"; // Importing PayPal component from the Components folder
 
+
 const OnDemandPage = () => {
 	// Declaring state variables using the useState hook
 	const [showVideo, setShowVideo] = useState(false); // showVideo state variable controls whether or not the video player is displayed
@@ -32,10 +33,7 @@ const OnDemandPage = () => {
 
 	// Function that checks if the user is authenticated and redirects to the appropriate page
 	function authCheck() {
-		if (user) {
-			window.location.href =
-				"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV77LMWL2NZ6U";
-		} else {
+		if (!user) {
 			window.location.href = "/signup";
 		}
 	}
