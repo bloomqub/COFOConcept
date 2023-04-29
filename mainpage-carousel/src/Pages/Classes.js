@@ -1,6 +1,7 @@
 import React from "react";
 import NavigationBarFinal from "../Components/NavigationBarFinal";
 import Footer from "../Components/Footer";
+import picture1 from "../Images/beach 7.JPG";
 
 const Classes = () => {
     return (
@@ -46,7 +47,7 @@ const Classes = () => {
  						</div>
 
  						<div>
- 							<img src = "../Images/beach 7.JPG" alt = "Kettlebell workout"></img>
+ 							<img src={picture1} alt="beach" className="img-fluid" />
  						</div>
 
  						<div className="card mb-4">
@@ -110,4 +111,4 @@ const Classes = () => {
  	);
 };
 
-// export default Classes;
+export default Classes;
