@@ -242,7 +242,7 @@ const OnDemandPage = () => {
 							setCheckout(true);
 						}}
 					>
-						Checkout
+						Buy Now
 					</Button>
 				)}
 				{/* <form

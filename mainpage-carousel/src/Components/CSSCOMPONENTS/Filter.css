@@ -10,6 +10,9 @@
     padding: 8px;
     margin-bottom: 16px;
   }
+  .filter{
+    padding-left: 1rem;
+  }
   
   .custom {
     width: min-content;
