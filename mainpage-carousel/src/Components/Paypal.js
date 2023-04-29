@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useRef } from 'react'
+import { getDatabase, ref, push } from 'firebase/database';
 
 export default function Paypal() {
   const paypal = useRef()
@@ -22,6 +23,11 @@ export default function Paypal() {
       onApprove: async (data, actions) => {
         const order = await actions.order.capture()
         console.log(order)
+
+        const db = getDatabase()
+            push(ref(db, 'paymentInfo/' ), {
+                order: order
+            })
       },
       onError: (err) => {
         console.log(err)

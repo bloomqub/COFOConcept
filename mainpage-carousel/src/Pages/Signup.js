@@ -6,6 +6,9 @@ import "./CSSPages/Signup.css";
 import logo from "../cofo-img/CoFoLogo.png";
 
 export default function Signup() {
+    const firstNameRef = useRef()  
+    const lastNameRef = useRef()
+    const numberRef = useRef()
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
