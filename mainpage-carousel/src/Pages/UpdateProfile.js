@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { Form, Button, Card, Alert } from 'react-bootstrap'
+import { Form, Button, Card, Alert, Container } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -48,11 +48,13 @@ export default function UpdateProfile() {
 
   return (
     <>
-        <Card>
+     
+        <Card className='wholecard'>
         <div className=''>
         <Button onClick={handleGoBack}>Back</Button>
         </div>
-            <Card.Body>
+        <Container>
+            <Card.Body class>
                 <h2 className='text-center mb-4'>Update Profile</h2>
                 {error && <Alert variant='danger'>{error}</Alert> }
                 <Form onSubmit={handleSubmit}>
@@ -71,7 +73,8 @@ export default function UpdateProfile() {
                     <Button disabled = {loading} className="w-100 mt-2" type="submit">Update</Button>
                 </Form>  
             </Card.Body>
-        </Card>
+            </Container>
+        </Card> 
         <div className='w-100 text-center mt-2'>
              <Link to="/">Cancel</Link>
         </div> 
