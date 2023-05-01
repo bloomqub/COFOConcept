@@ -7,10 +7,11 @@ export default function UpdateProfile() {
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
-    const { currentUser, updateEmail, updatePassword } = useAuth()
+    const { currentUser, updateEmail, updatePassword, logout } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
+    
 
     // checks to see if passwords match when signing up throws error if they do not
     function handleSubmit(e) {
@@ -42,6 +43,16 @@ export default function UpdateProfile() {
         })
 
     }
+    async function handleLogout() {
+        setError('')
+
+        try {
+            await logout()
+            navigate('/')
+        } catch {
+            setError('Failed to log out')
+        }
+    } 
     function handleGoBack() {
         navigate(-1);
     }
@@ -76,7 +87,7 @@ export default function UpdateProfile() {
             </Container>
         </Card> 
         <div className='w-100 text-center mt-2'>
-             <Link to="/">Cancel</Link>
+             <Link to="/" onClick={handleLogout}>Logout</Link>
         </div> 
     </>
     
