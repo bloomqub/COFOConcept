@@ -1,7 +1,7 @@
 import React from "react";
 import NavigationBarFinal from "../Components/NavigationBarFinal";
 import Footer from "../Components/Footer";
-import picture1 from "../Images/beach 7.JPG";
+// import picture1 from "../Images/beach 7.JPG";
 
 const Classes = () => {
     return (
@@ -46,9 +46,9 @@ const Classes = () => {
  							</div>
  						</div>
 
- 						<div>
+ 						{/* <div>
  							<img src={picture1} alt="beach" className="img-fluid" />
- 						</div>
+ 						</div> */}
 
  						<div className="card mb-4">
  							<div className="card-body">
