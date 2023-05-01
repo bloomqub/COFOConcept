@@ -21,11 +21,11 @@ export function useAuth(){
 export function AuthProvider({ children }) {
     const [currentUser, setCurrentUser] = useState()
     const [loading, setLoading] = useState(true)  //verification to see if there is already user
-    const [signedIn, setSignedIn] = useState(false) 
+    //const [signedIn, setSignedIn] = useState(false) 
     
     // cretes a user instance when signup occurs
 
-    function signup(email, password, firstName, lastName, number) {
+    function signup(email, password, firstName, lastName, number, userID) {
        // sendEmailVerification(auth.currentUser)
          //   .then(() => {
            //     alert("Email verification sent!")
@@ -36,18 +36,16 @@ export function AuthProvider({ children }) {
                 firstName: firstName,
                 lastName: lastName,
                 number: number,
-                //uid: uid
-                
             })
 
-            emailjs
-				.send(serviceId, templateId, userId)
-				.then(function (response) {
-					console.log("SUCCESS!", response.status, response.text)
-				})
-				.catch(function (error) { // if email fails to send
-					console.log("FAILED...", error);
-				});
+            // emailjs
+			// 	.send(serviceId, templateId, userId)
+			// 	.then(function (response) {
+			// 		console.log("SUCCESS!", response.status, response.text)
+			// 	})
+			// 	.catch(function (error) { // if email fails to send
+			// 		console.log("FAILED...", error);
+			// 	});
 
         return auth.createUserWithEmailAndPassword(email, password, firstName, lastName, number) 
     }

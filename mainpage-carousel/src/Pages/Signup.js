@@ -4,6 +4,7 @@ import { useAuth } from '../contexts/AuthContext'
 import { Link, useNavigate } from 'react-router-dom'
 import "./CSSPages/Signup.css";
 import logo from "../cofo-img/CoFoLogo.png";
+import { auth } from '../firebase';
 
 export default function Signup() {
     const firstNameRef = useRef()  
@@ -12,6 +13,7 @@ export default function Signup() {
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
+    const user = auth.currentUser
     const { signup } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
@@ -28,7 +30,7 @@ export default function Signup() {
         try{
             setError('')
             setLoading(true)
-            await signup(emailRef.current.value, passwordRef.current.value)
+            await signup(emailRef.current.value, passwordRef.current.value, firstNameRef.current.value, lastNameRef.current.value, numberRef.current.value)
             navigate("/")
         } catch {
             setError('Failed to create an account')
@@ -69,7 +71,7 @@ export default function Signup() {
                     </Form.Group>
                     <Form.Group id ="password">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" ref={passwordRef} required />
+                        <Form.Control type="password" placeholder = "Password must be at least 6 characters" ref={passwordRef} required />
                     </Form.Group>
                     <Form.Group id ="password-confirm">
                         <Form.Label>Password Confirmation</Form.Label>
