@@ -87,7 +87,7 @@ export default function UpdateProfile() {
             </Container>
         </Card> 
         <div className='w-100 text-center mt-2'>
-             <Link to="/" onClick={handleLogout}>Logout</Link>
+             <Button onClick={handleLogout}>Logout</Button>
         </div> 
     </>
     
