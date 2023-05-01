@@ -233,7 +233,7 @@ const OnDemandPage = () => {
 			<section className="subscribe">
 				<h2>Subscribe Today</h2>
 				<p>Don't miss out on our latest on-demand workout videos!</p>
-				{/* {Checkout ? (
+				{Checkout ? (
 					<PayPal />
 				) : (
 					<Button
@@ -244,8 +244,8 @@ const OnDemandPage = () => {
 					>
 						Buy Now
 					</Button>
-				)} */}
-				<form
+				)}
+				{/* <form
 					action="https://www.paypal.com/cgi-bin/webscr"
 					method="post"
 					target="_top"
@@ -290,7 +290,7 @@ const OnDemandPage = () => {
 						width="1"
 						height="1"
 					></img>
-				</form>
+				</form> */}
 			</section>
 			<Footer />
 		</>
