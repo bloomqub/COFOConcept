@@ -4,6 +4,12 @@ import { getDatabase, ref, push } from 'firebase/database';
 
 export default function Paypal() {
   const paypal = useRef()
+  /**
+   * 
+   * @returns
+   * Function that renders the PayPal button
+   * The function returns the PayPal button
+   */
   useEffect(() => {
     window.paypal.Buttons({
       createOrder: (data, actions, err) => {
@@ -20,6 +26,15 @@ export default function Paypal() {
           ],
         })
       },
+      /**
+       * 
+       * @param {*} data 
+       * @param {*} actions 
+       * @returns
+       * Function that captures the order and pushes the order to the database
+       * The function takes in the data and actions as parameters
+       * The function returns the order
+       */
       onApprove: async (data, actions) => {
         const order = await actions.order.capture()
         console.log(order)
@@ -29,6 +44,13 @@ export default function Paypal() {
                 order: order
             })
       },
+      /**
+       * 
+       * @param {*} err 
+       * Function that logs an error if the payment fails
+       * The function takes in the err as a parameter
+       * The function returns the error
+       */
       onError: (err) => {
         console.log(err)
       },

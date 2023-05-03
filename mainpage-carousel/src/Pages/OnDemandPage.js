@@ -31,14 +31,25 @@ const OnDemandPage = () => {
 	// Retrieving the currently logged in user
 	const user = auth.currentUser;
 
-	// Function that checks if the user is authenticated and redirects to the appropriate page
+	/**
+	 * Function that checks if the user is authenticated
+	 * If the user is not authenticated, the user is redirected to the signup page
+	 * If the user is authenticated, the user is able to view the video player
+	 */
 	function authCheck() {
 		if (!user) {
 			window.location.href = "/signup";
 		}
 	}
-
-	// Event handler for when the button "view workout" is clicked
+	/**
+	 * 
+	 * @param {*} title 
+	 * @param {*} url 
+	 * @returns
+	 * Function that displays the video player when the "view workout" button is clicked
+	 * The function takes in the title and URL of the video to be displayed as parameters
+	 * The function returns the video player component
+	 */
 	const handleViewClick = (title, url) => {
 		authCheck(); // Check if the user is authenticated
 		setLoading(true); // Display the loading page
@@ -47,13 +58,21 @@ const OnDemandPage = () => {
 		setVideoTitle(title); // Set the title of the video to be displayed
 	};
 
+	/**
+	 * useEffect hook that runs when the component is rendered
+	 * the hook checks if the loading state variable is true
+	 * If the loading state variable is true, the video player is hidden
+	 */
 	useEffect(() => {
 		if (loading) {
 			setShowVideo(false); // Hide the video modal
 		}
 	}, [loading]);
 
-	// Event handler for when the video player is closed
+	/**
+	 * Function that hides the video player when the "close" button is clicked
+	 * The function returns the video player component
+	 */
 	const handleVideoClose = () => {
 		setShowVideo(false); // Hide the video player
 		setVideoUrl(""); // Clear the URL of the video

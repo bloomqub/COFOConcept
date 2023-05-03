@@ -25,7 +25,18 @@ function Contact() {
 		setCaptchaDone(true);
 	}
 
-  // function to send email on form submission
+  /**
+   * 
+   * @param {*} event 
+   * @returns 
+   * Function that sends an email when the "submit" button is clicked
+   * The function takes in the event as a parameter
+   * The function returns the emailjs.send function
+   * The function also checks if the captcha is completed
+   * If the captcha is not completed, the function returns an error message
+   * If the captcha is completed, the function sends an email using the emailjs.send function
+   * If the email is sent successfully, the function displays a success message
+   */
 	function sendEmail(event) {
 		event.preventDefault();
 		if (captchaIsDone) {
@@ -41,8 +52,7 @@ function Contact() {
 				subject: subject,
 				message: message,
 			};
-
-      // send email using emailjs library
+			
 			emailjs
 				.send(serviceId, templateId, templateParams, userId)
 				.then(function (response) {
@@ -58,7 +68,11 @@ function Contact() {
 		
 	}
 
-  // reload page after successful form submission
+  /**
+   * 
+   * @returns
+   * Function that reloads the page when the form is submitted
+   */
 	useEffect(() => {
 		if (formisdone) {
 			window.location.reload();
