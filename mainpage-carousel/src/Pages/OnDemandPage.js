@@ -235,20 +235,6 @@ const OnDemandPage = () => {
 					</div>
 				</div>
 			)}
-
-			{/* <section className="category">
-				<h2>Full Body</h2>
-				
-			</section>
-			<section className="category">
-				<h2>Upper Body</h2>
-			</section>
-			<section className="category">
-				<h2>Lower Body</h2>
-			</section>
-			<section className="category">
-				<h2>Core</h2>
-			</section> */}
 			<section className="subscribe">
 				<h2>Subscribe Today</h2>
 				<p>Don't miss out on our latest on-demand workout videos!</p>
