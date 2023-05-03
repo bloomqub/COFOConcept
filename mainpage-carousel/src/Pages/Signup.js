@@ -24,7 +24,7 @@ export default function Signup() {
         e.preventDefault()
         
         if(passwordRef.current.value !== passwordConfirmRef.current.value) {
-            return setError("Password do not match")
+            return setError("Password does not match")
         }
 
         try{
@@ -75,7 +75,7 @@ export default function Signup() {
                     </Form.Group>
                     <Form.Group id ="password-confirm">
                         <Form.Label>Password Confirmation</Form.Label>
-                        <Form.Control type="password" ref={passwordConfirmRef} required />
+                        <Form.Control type="password" placeholder = "Confirm Password" ref={passwordConfirmRef} required />
                     </Form.Group>
                     <Button disabled = {loading} className="w-100 mt-2" type="submit">Sign Up</Button>
                 </Form>  
