@@ -126,6 +126,7 @@ const OnDemandPage = () => {
 							</Button>
 						</Card.Body>
 					</Card>
+					{/* Card component */}
 					<Card style={{ width: "100%" }}>
 						<Card.Img
 							variant="top"
@@ -150,6 +151,9 @@ const OnDemandPage = () => {
 							</Button>
 						</Card.Body>
 					</Card>
+					{/* End of card component */}
+					
+					{/* Card component */}
 					<Card style={{ width: "100%" }}>
 						<Card.Img
 							variant="top"
